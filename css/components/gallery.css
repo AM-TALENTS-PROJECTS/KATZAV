@@ -70,8 +70,8 @@
 .gallery__item:nth-child(8)  { grid-column: 4 / 7;  grid-row: 4 / 5; }
 .gallery__item:nth-child(9)  { grid-column: 7 / 10; grid-row: 4 / 5; }
 .gallery__item:nth-child(10) { grid-column: 10 / 13; grid-row: 4 / 5; }
-.gallery__item:nth-child(11) { grid-column: 6 / 9;  grid-row: 5 / 6; }
-.gallery__item:nth-child(12) { grid-column: 9 / 13; grid-row: 5 / 6; }
+.gallery__item:nth-child(11) { grid-column: 3 / 7;  grid-row: 5 / 6; }
+.gallery__item:nth-child(12) { grid-column: 7 / 11; grid-row: 5 / 6; }
 
 /* Ligne supplémentaire pour items 11-12 */
 .gallery__grid {
