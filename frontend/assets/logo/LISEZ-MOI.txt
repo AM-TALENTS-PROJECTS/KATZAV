@@ -1,0 +1,4 @@
+Déposez ici le logo Katzav Delicatessen.
+Nom attendu : katzav-logo.png (ou .svg)
+Format recommandé : SVG ou PNG transparent
+Usage : navigation (hauteur 40px), footer (hauteur 32px)

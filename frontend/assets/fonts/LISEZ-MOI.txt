@@ -1,0 +1,10 @@
+Déposez ici le fichier de la police Funtastic.
+Formats attendus (du plus optimisé au moins) :
+  - Funtastic.woff2   ← prioritaire (format web moderne)
+  - Funtastic.woff    ← fallback navigateurs anciens
+  - Funtastic.ttf     ← fallback
+
+Le fichier @font-face dans css/main.css pointe déjà vers ces chemins.
+Aucune modification de code requise une fois le fichier déposé ici.
+
+Si la police a un nom de fichier différent, mettre à jour la règle @font-face dans css/main.css.

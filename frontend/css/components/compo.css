@@ -1,0 +1,265 @@
+/* ═══════════════════════════════════════════════════════════════
+   COMPO — Builder sandwich interactif
+   ═══════════════════════════════════════════════════════════════ */
+
+.compo {
+  background-color: var(--red);
+  padding: var(--spacing-2xl) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Motif diagonal sur fond rouge */
+.compo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 30px,
+    rgba(0, 0, 0, 0.05) 30px,
+    rgba(0, 0, 0, 0.05) 31px
+  );
+  pointer-events: none;
+}
+
+.compo__container {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+/* ── En-tête ────────────────────────────────────────────────── */
+.compo__header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.compo__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  color: var(--white);
+  font-weight: 700;
+  line-height: 0.95;
+  margin: 0 0 0.5rem;
+}
+
+.compo__subtitle {
+  font-family: var(--font-label);
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ── Prix total ────────────────────────────────────────────── */
+.compo__price-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: var(--spacing-lg) 0;
+}
+
+.compo__price-label {
+  font-family: var(--font-label);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.compo__price-total {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  color: var(--white);
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.compo__price-total.is-updated {
+  transform: scale(1.15);
+}
+
+/* ── Étapes du builder ─────────────────────────────────────── */
+.compo__steps {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.compo__step {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: var(--spacing-lg);
+}
+
+.compo__step-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.compo__step-number {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.2);
+  line-height: 1;
+}
+
+.compo__step-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--white);
+  line-height: 1;
+}
+
+.compo__step-limit {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.6);
+  margin-left: auto;
+}
+
+.compo__step-counter {
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 0.2rem 0.6rem;
+  border-radius: 2px;
+}
+
+/* ── Grille d'options ───────────────────────────────────────── */
+.compo__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.compo__option {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.compo__option:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.compo__option.is-selected {
+  background-color: var(--white);
+  border-color: var(--white);
+  color: var(--red);
+  font-weight: 800;
+}
+
+.compo__option.is-disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.compo__option.is-disabled:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.compo__option-extra {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: rgba(255, 255, 0, 0.9);
+}
+
+.compo__option.is-selected .compo__option-extra {
+  color: var(--red-dark);
+}
+
+/* ── Message d'erreur max atteint ────────────────────────────── */
+.compo__step-warning {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 0, 0.9);
+  margin-top: var(--spacing-sm);
+  display: none;
+}
+
+.compo__step-warning.is-visible {
+  display: block;
+}
+
+/* ── CTA final ─────────────────────────────────────────────── */
+.compo__footer {
+  margin-top: var(--spacing-2xl);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.compo__footer-text {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.compo__footer-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-label);
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  background-color: var(--white);
+  color: var(--red);
+  border-radius: 50px;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.compo__footer-cta:hover {
+  background-color: var(--off-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(232, 0, 28, 0.12);
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .compo__step {
+    padding: var(--spacing-md);
+  }
+
+  .compo__step-title {
+    font-size: 1.4rem;
+  }
+
+  .compo__option {
+    font-size: 0.8rem;
+    padding: 0.45rem 0.8rem;
+  }
+}

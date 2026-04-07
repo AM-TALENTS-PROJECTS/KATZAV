@@ -1,0 +1,8 @@
+Nommage des photos pour la galerie et les sections :
+- hero-bg.jpg          → Image de fond du hero (si utilisée)
+- sandwich-[nom].jpg   → Ex : sandwich-le-katzav.jpg
+- burger-[nom].jpg     → Ex : burger-big-burger.jpg
+- ambiance-[n].jpg     → Photos de salle, équipe
+- starter-[nom].jpg    → Ex : starter-houmous-bassar.jpg
+Résolution recommandée : 1200×800px minimum
+Format : JPG optimisé (max 300ko par image)

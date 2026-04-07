@@ -1,0 +1,237 @@
+/* ═══════════════════════════════════════════════════════════════
+   HERO — Section d'accroche principale
+   ═══════════════════════════════════════════════════════════════ */
+
+.hero {
+  min-height: 100vh;
+  background-color: var(--red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--nav-height);
+}
+
+/* Texture grain CSS */
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Texture subtile blanc sur fond rouge */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 40px,
+    rgba(255, 255, 255, 0.05) 40px,
+    rgba(255, 255, 255, 0.05) 41px
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Image de fond hero */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.55;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Blob décoratif blanc sur rouge */
+.hero__blob {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(ellipse, rgba(255, 255, 255, 0.10) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero__container {
+  position: relative;
+  z-index: 1;
+  max-width: var(--max-width);
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--spacing-2xl) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-lg);
+}
+
+/* ── Accroche principale ─────────────────────────────────────── */
+.hero__eyebrow {
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.6s ease forwards 0.1s;
+}
+
+.hero__headline {
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 18vw, 14rem);
+  line-height: 0.9;
+  color: var(--white);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 0.7s ease forwards 0.25s;
+}
+
+.hero__subheadline {
+  font-family: var(--font-label);
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.6s ease forwards 0.45s;
+}
+
+/* ── Badge kasher ────────────────────────────────────────────── */
+.hero__kasher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50px;
+  padding: 0.4rem 0.8rem;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  animation: fadeSlideUp 0.6s ease forwards 0.6s;
+}
+
+.hero__kasher-icon {
+  font-size: 0.9rem;
+}
+
+/* ── Boutons CTA ─────────────────────────────────────────────── */
+.hero__ctas {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlideUp 0.6s ease forwards 0.75s;
+}
+
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-label);
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  padding: 0.9rem 1.8rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.hero__cta--primary {
+  background-color: var(--white);
+  color: var(--red);
+  border-radius: 50px;
+  font-weight: 800;
+}
+
+.hero__cta--primary:hover {
+  background-color: var(--off-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.hero__cta--secondary {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50px;
+}
+
+.hero__cta--secondary:hover {
+  border-color: var(--white);
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.hero__cta-icon {
+  font-size: 1rem;
+}
+
+/* ── Animation keyframes ─────────────────────────────────────── */
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Respect prefers-reduced-motion ──────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .hero__eyebrow,
+  .hero__headline,
+  .hero__subheadline,
+  .hero__kasher,
+  .hero__ctas {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero__container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero__ctas {
+    justify-content: center;
+  }
+
+  .hero__cta {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.75rem;
+  }
+
+  .hero__blob {
+    width: 300px;
+    height: 300px;
+    opacity: 0.6;
+  }
+}

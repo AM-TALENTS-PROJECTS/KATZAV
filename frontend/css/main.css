@@ -1,0 +1,165 @@
+/* ═══════════════════════════════════════════════════════════════
+   MAIN.CSS — Styles globaux, reset, variables, utilitaires
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Police Funtastic (police officielle Katzav) ─────────────── */
+@font-face {
+  font-family: 'Funtastic';
+  src: url('../assets/fonts/Funtastic.woff2') format('woff2'),
+       url('../assets/fonts/Funtastic.woff')  format('woff'),
+       url('../assets/fonts/Funtastic.ttf')   format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Variables CSS ───────────────────────────────────────────── */
+:root {
+  /* Palette */
+  --red:        #E8001C;
+  --red-dark:   #C0001A;
+  --red-light:  #FF1A33;
+  --white:      #FFFFFF;
+  --off-white:  #FFF8F8;
+  --cream:      #FFF5F0;
+  --black:      #1A0A0A;
+  --gray-dark:  #1F0A0A;
+  --text-dark:  #2D1010;
+  --text-muted: #7A4444;
+
+  /* Typographies */
+  --font-display: 'Funtastic', 'Baloo 2', cursive;
+  --font-label:   'Baloo 2', 'Nunito', sans-serif;
+  --font-body:    'Nunito', sans-serif;
+
+  /* Spacing (base 8px) */
+  --spacing-xs:  0.25rem;   /*  4px */
+  --spacing-sm:  0.5rem;    /*  8px */
+  --spacing-md:  1rem;      /* 16px */
+  --spacing-lg:  1.5rem;    /* 24px */
+  --spacing-xl:  2.5rem;    /* 40px */
+  --spacing-2xl: 5rem;      /* 80px */
+
+  /* Layout */
+  --max-width:  1280px;
+  --nav-height: 64px;
+}
+
+/* ── Reset & base ────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--white);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Désactivation du smooth scroll si réduction de mouvement demandée */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+/* ── Utilitaires ─────────────────────────────────────────────── */
+
+/* Skip link accessibilité */
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: var(--spacing-md);
+  background-color: var(--red);
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  z-index: 9999;
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: var(--spacing-md);
+}
+
+/* Scroll reveal — état initial */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Décalage staggered pour les grilles */
+.reveal--delay-1 { transition-delay: 0.1s; }
+.reveal--delay-2 { transition-delay: 0.2s; }
+.reveal--delay-3 { transition-delay: 0.3s; }
+.reveal--delay-4 { transition-delay: 0.4s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* ── Scrollbar personnalisée (optionnel) ────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--off-white);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--red);
+}
+
+/* ── Focus visible ───────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--red);
+  outline-offset: 3px;
+}

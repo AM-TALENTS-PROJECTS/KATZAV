@@ -1,0 +1,396 @@
+/* ═══════════════════════════════════════════════════════════════
+   FOOTER — Pied de page
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── Section Horaires & Accès ────────────────────────────────── */
+.access {
+  background-color: var(--white);
+  padding: var(--spacing-2xl) 0;
+  border-top: 3px solid var(--red);
+}
+
+.access__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.access__header {
+  margin-bottom: var(--spacing-xl);
+}
+
+.access__section-label {
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.access__title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  color: var(--red);
+  font-weight: 700;
+  line-height: 0.95;
+  margin: 0;
+}
+
+.access__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-2xl);
+  align-items: start;
+}
+
+/* Colonne horaires */
+.access__hours {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.access__hours-title {
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  border-bottom: 1px solid rgba(232, 0, 28, 0.15);
+  padding-bottom: 0.5rem;
+}
+
+.access__hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.access__hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+}
+
+.access__hours-day {
+  color: var(--text-muted);
+  font-weight: 500;
+  min-width: 130px;
+}
+
+.access__hours-time {
+  color: var(--text-dark);
+  font-weight: 700;
+  text-align: right;
+}
+
+.access__hours-row--shabat {
+  background-color: rgba(232, 0, 28, 0.05);
+  padding: 0.5rem 0.75rem;
+  border-left: 3px solid var(--red);
+  border-radius: 4px;
+  margin: 0 -0.75rem;
+}
+
+.access__hours-row--shabat .access__hours-day {
+  color: var(--text-dark);
+  font-weight: 700;
+}
+
+.access__hours-row--shabat .access__hours-time {
+  color: var(--red);
+}
+
+.access__hours-note {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Modes de service */
+.access__modes {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  margin-top: var(--spacing-sm);
+}
+
+.access__mode-badge {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dark);
+  background-color: rgba(232, 0, 28, 0.08);
+  border: 1px solid rgba(232, 0, 28, 0.2);
+  border-radius: 50px;
+  padding: 0.3rem 0.7rem;
+}
+
+/* Réseaux sociaux */
+.access__socials {
+  display: flex;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+}
+
+.access__social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-label);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-dark);
+  background-color: transparent;
+  border: 1px solid rgba(232, 0, 28, 0.3);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.access__social-btn:hover {
+  background-color: var(--red);
+  border-color: var(--red);
+  color: var(--white);
+}
+
+/* Colonne carte / infos */
+.access__map-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.access__map {
+  width: 100%;
+  height: 280px;
+  border: none;
+  display: block;
+  filter: grayscale(60%) contrast(1.1);
+}
+
+.access__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.access__contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.access__contact-item a {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.access__contact-item a:hover {
+  color: var(--red);
+}
+
+.access__contact-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ── Footer principal ────────────────────────────────────────── */
+.footer {
+  background-color: var(--black);
+  border-top: 1px solid rgba(232, 0, 28, 0.3);
+  padding: var(--spacing-xl) 0 var(--spacing-lg);
+}
+
+.footer__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--spacing-xl);
+  padding-bottom: var(--spacing-xl);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Colonne marque */
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.footer__logo {
+  height: 32px;
+  width: auto;
+}
+
+.footer__logo-placeholder {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.footer__logo-placeholder span {
+  color: var(--red);
+}
+
+.footer__tagline {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.4);
+  line-height: 1.5;
+  max-width: 220px;
+}
+
+.footer__kasher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.3rem 0.6rem;
+  margin-top: var(--spacing-sm);
+  width: fit-content;
+}
+
+/* Colonne liens */
+.footer__nav-title {
+  font-family: var(--font-label);
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--red);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: var(--spacing-md);
+}
+
+.footer__nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer__nav-list a {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__nav-list a:hover {
+  color: var(--white);
+}
+
+/* Colonne contact */
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer__contact-item {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.footer__contact-item a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__contact-item a:hover {
+  color: var(--white);
+}
+
+/* ── Footer bas ───────────────────────────────────────────────── */
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.footer__copy {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.25);
+}
+
+.footer__legal {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.footer__legal a {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer__legal a:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ── Responsive ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .access__grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+  }
+
+  .footer__top {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 560px) {
+  .footer__top {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
