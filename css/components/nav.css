@@ -35,10 +35,24 @@
   flex-shrink: 0;
 }
 
+.nav__logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
 .nav__logo {
   height: 40px;
   width: auto;
   display: block;
+}
+
+.nav__bethdin-logo {
+  height: 36px;
+  width: auto;
+  display: block;
+  opacity: 0.9;
 }
 
 .nav__logo-placeholder {
