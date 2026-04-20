@@ -193,3 +193,34 @@
     padding: 0.6rem 0.8rem;
   }
 }
+
+/* ── Onglet spécial Tisha Beav ── */
+.menu__tab--special {
+  background: #1B4FD8;
+  color: #ffffff;
+  border-color: #1B4FD8;
+  font-weight: 700;
+}
+
+.menu__tab--special:hover,
+.menu__tab--special[aria-selected="true"] {
+  background: #1640B0;
+  border-color: #1640B0;
+  color: #ffffff;
+}
+
+.tisha-header {
+  background: #1B4FD8;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.tisha-section-title {
+  color: #1B4FD8;
+  text-align: center;
+  margin-bottom: 16px;
+}
