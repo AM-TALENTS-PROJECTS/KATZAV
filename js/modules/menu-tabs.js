@@ -23,6 +23,7 @@ export function initMenuTabs() {
     });
 
     panels.forEach((panel) => {
+      if (panel.id === 'panel-tishabeav') return;
       panel.classList.remove('is-active');
       panel.setAttribute('hidden', '');
     });
