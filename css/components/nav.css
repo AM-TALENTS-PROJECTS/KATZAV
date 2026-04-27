@@ -53,9 +53,9 @@
   height: 28px;
   width: auto;
   display: block;
-  align-self: flex-end;
+  align-self: center;
   opacity: 0.9;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
 }
 
 .nav__logo-placeholder {
