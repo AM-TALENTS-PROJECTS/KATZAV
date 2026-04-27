@@ -71,31 +71,4 @@ export function initMenuTabs() {
   if (tabs.length > 0) {
     activateTab(tabs[0]);
   }
-
-  // Toggle bandeau Tisha Beav — masque les onglets et le panneau actif
-  const tishaBanner = document.getElementById('tisha-toggle');
-  const tishaPanel = document.getElementById('panel-tishabeav');
-
-  if (tishaBanner && tishaPanel) {
-    tishaPanel.hidden = true;
-    tishaBanner.addEventListener('click', () => {
-      const tabsWrapper = document.querySelector('.menu__tabs-wrapper');
-      const activePanel = document.querySelector('.menu__panel.is-active:not(#panel-tishabeav)');
-      const isHidden = tishaPanel.hidden;
-
-      if (isHidden) {
-        tishaPanel.hidden = false;
-        tishaPanel.classList.add('is-active');
-        if (tabsWrapper) tabsWrapper.style.display = 'none';
-        if (activePanel) activePanel.style.display = 'none';
-        tishaBanner.textContent = '✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour fermer';
-      } else {
-        tishaPanel.hidden = true;
-        tishaPanel.classList.remove('is-active');
-        if (tabsWrapper) tabsWrapper.style.display = '';
-        if (activePanel) activePanel.style.display = '';
-        tishaBanner.textContent = '✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir';
-      }
-    });
-  }
 }
