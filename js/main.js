@@ -100,55 +100,6 @@ function initPricePulse() {
   observer.observe(priceEl, { childList: true, subtree: true, characterData: true });
 }
 
-function initTishaToggle() {
-  const btn = document.getElementById('tisha-toggle');
-  const tishaSection = document.getElementById('tisha-section');
-  const mainSection = document.getElementById('main-menu-section');
-
-  if (!btn || !tishaSection || !mainSection) return;
-
-  const tishaTabs = Array.from(tishaSection.querySelectorAll('.tisha__tab'));
-  const tishaPanels = Array.from(tishaSection.querySelectorAll('.menu__panel'));
-
-  function activateTishaTab(activeTab) {
-    tishaTabs.forEach((t) => {
-      t.classList.remove('is-active');
-      t.setAttribute('aria-selected', 'false');
-    });
-    tishaPanels.forEach((p) => {
-      p.classList.remove('is-active');
-      p.hidden = true;
-    });
-    activeTab.classList.add('is-active');
-    activeTab.setAttribute('aria-selected', 'true');
-    const target = document.getElementById(activeTab.getAttribute('aria-controls'));
-    if (target) {
-      target.classList.add('is-active');
-      target.hidden = false;
-    }
-  }
-
-  tishaTabs.forEach((tab) => {
-    tab.addEventListener('click', () => activateTishaTab(tab));
-  });
-
-  btn.addEventListener('click', () => {
-    const opening = tishaSection.hidden;
-    if (opening) {
-      tishaSection.hidden = false;
-      mainSection.hidden = true;
-      btn.textContent = '✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour fermer';
-      if (tishaTabs.length > 0 && !tishaTabs.some((t) => t.classList.contains('is-active'))) {
-        activateTishaTab(tishaTabs[0]);
-      }
-    } else {
-      tishaSection.hidden = true;
-      mainSection.hidden = false;
-      btn.textContent = '✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir';
-    }
-  });
-}
-
 /**
  * Initialisation globale au chargement du DOM.
  */
@@ -160,6 +111,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initCompoBuilder();
   initScrollAnimations();
   initPricePulse();
-  initTishaToggle();
 });
 
