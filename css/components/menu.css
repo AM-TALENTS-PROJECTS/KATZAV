@@ -194,6 +194,24 @@
   }
 }
 
+/* ── Bandeau Tisha Beav ── */
+.tisha-banner {
+  background: #1B4FD8;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 20px;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+.tisha-banner:hover {
+  background: #1640B0;
+}
+
 /* ── Onglet spécial Tisha Beav ── */
 .menu__tab--special {
   background: #1B4FD8;
