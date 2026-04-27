@@ -241,9 +241,6 @@
           <h2 class="menu__title" id="menu-title">LA CARTE</h2>
         </div>
 
-        <!-- Bandeau Tisha Beav -->
-        <button id="tisha-toggle" style="background:#1B4FD8;color:#ffffff;padding:12px 32px;font-size:1rem;font-weight:700;cursor:pointer;border-radius:8px;border:none;display:block;margin:0 auto 20px auto;letter-spacing:0.05em;" onclick="var p=document.getElementById('panel-tishabeav');var tw=document.querySelector('.menu__tabs-wrapper');var tabs=document.querySelector('.menu__tabs');var activePanel=document.querySelector('.menu__panel.is-active');var hidden=p.hasAttribute('hidden');if(hidden){p.removeAttribute('hidden');p.classList.add('is-active');if(tw)tw.style.display='none';if(tabs)tabs.style.display='none';if(activePanel)activePanel.style.display='none';this.textContent='✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour fermer';}else{p.setAttribute('hidden','');p.classList.remove('is-active');if(tw)tw.style.display='';if(tabs)tabs.style.display='';if(activePanel)activePanel.style.display='';this.textContent='✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir';}">✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir</button>
-
         <!-- Navigation par onglets -->
         <div class="menu__tabs-wrapper" role="tablist" aria-label="Catégories de la carte">
           <div class="menu__tabs">
@@ -749,6 +746,9 @@
           </div>
 
         </div>
+
+        <!-- Bouton Tisha Beav -->
+        <button id="tisha-toggle" style="background:#1B4FD8;color:#ffffff;padding:10px 24px;font-size:0.95rem;font-weight:700;cursor:pointer;border-radius:8px;border:none;display:block;margin:16px 0 0 0;letter-spacing:0.05em;" onclick="var p=document.getElementById('panel-tishabeav');var tw=document.querySelector('.menu__tabs-wrapper');var tabs=document.querySelector('.menu__tabs');var activePanel=document.querySelector('.menu__panel.is-active');var hidden=p.hasAttribute('hidden');if(hidden){p.removeAttribute('hidden');p.classList.add('is-active');if(tw)tw.style.display='none';if(tabs)tabs.style.display='none';if(activePanel)activePanel.style.display='none';this.textContent='✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour fermer';}else{p.setAttribute('hidden','');p.classList.remove('is-active');if(tw)tw.style.display='';if(tabs)tabs.style.display='';if(activePanel)activePanel.style.display='';this.textContent='✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir';}">✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir</button>
 
       </div><!-- /.menu__container -->
     </section>
