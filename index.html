@@ -242,7 +242,7 @@
         </div>
 
         <!-- Bandeau Tisha Beav -->
-        <button id="tisha-toggle" onclick="var p=document.getElementById('panel-tishabeav'); var hidden=p.hasAttribute('hidden'); if(hidden){p.removeAttribute('hidden');}else{p.setAttribute('hidden','');} this.textContent=hidden ? '✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour fermer' : '✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir';" style="background:#1B4FD8;color:#ffffff;text-align:center;padding:14px 20px;font-size:1.1rem;cursor:pointer;margin-bottom:16px;border-radius:8px;display:block;width:100%;box-sizing:border-box;border:none;">✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir</button>
+        <button id="tisha-toggle" onclick="var p=document.getElementById('panel-tishabeav'); var isOpen=p.classList.contains('is-active'); if(isOpen){p.classList.remove('is-active');p.setAttribute('hidden','');this.textContent='✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir';}else{p.classList.add('is-active');p.removeAttribute('hidden');this.textContent='✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour fermer';}" style="background:#1B4FD8;color:#ffffff;text-align:center;padding:14px 20px;font-size:1.1rem;cursor:pointer;margin-bottom:16px;border-radius:8px;display:block;width:100%;box-sizing:border-box;border:none;">✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir</button>
 
         <!-- Navigation par onglets -->
         <div class="menu__tabs-wrapper" role="tablist" aria-label="Catégories de la carte">
