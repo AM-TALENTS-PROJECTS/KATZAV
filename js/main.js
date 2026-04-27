@@ -100,70 +100,66 @@ function initPricePulse() {
   observer.observe(priceEl, { childList: true, subtree: true, characterData: true });
 }
 
+function initTishaToggle() {
+  const btn = document.getElementById('tisha-toggle');
+  const tishaSection = document.getElementById('tisha-section');
+  const mainSection = document.getElementById('main-menu-section');
+
+  if (!btn || !tishaSection || !mainSection) return;
+
+  const tishaTabs = Array.from(tishaSection.querySelectorAll('.tisha__tab'));
+  const tishaPanels = Array.from(tishaSection.querySelectorAll('.menu__panel'));
+
+  function activateTishaTab(activeTab) {
+    tishaTabs.forEach((t) => {
+      t.classList.remove('is-active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    tishaPanels.forEach((p) => {
+      p.classList.remove('is-active');
+      p.hidden = true;
+    });
+    activeTab.classList.add('is-active');
+    activeTab.setAttribute('aria-selected', 'true');
+    const target = document.getElementById(activeTab.getAttribute('aria-controls'));
+    if (target) {
+      target.classList.add('is-active');
+      target.hidden = false;
+    }
+  }
+
+  tishaTabs.forEach((tab) => {
+    tab.addEventListener('click', () => activateTishaTab(tab));
+  });
+
+  btn.addEventListener('click', () => {
+    const opening = tishaSection.hidden;
+    if (opening) {
+      tishaSection.hidden = false;
+      mainSection.hidden = true;
+      btn.textContent = '✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour fermer';
+      if (tishaTabs.length > 0 && !tishaTabs.some((t) => t.classList.contains('is-active'))) {
+        activateTishaTab(tishaTabs[0]);
+      }
+    } else {
+      tishaSection.hidden = true;
+      mainSection.hidden = false;
+      btn.textContent = '✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir';
+    }
+  });
+}
+
 /**
  * Initialisation globale au chargement du DOM.
  */
 document.addEventListener('DOMContentLoaded', () => {
-  // Modules UI
   initMobileMenu();
   initNavScroll();
   initOrderCTA();
-
-  // Modules fonctionnels
   initMenuTabs();
   initCompoBuilder();
-
-  // Animations
   initScrollAnimations();
   initPricePulse();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-  var btn = document.getElementById('tisha-toggle');
-  var tishaSection = document.getElementById('tisha-section');
-  var mainSection = document.getElementById('main-menu-section');
-
-  if (!btn || !tishaSection || !mainSection) return;
-
-  var tishaTabs = tishaSection.querySelectorAll('.tisha__tab');
-  var tishaPanels = tishaSection.querySelectorAll('.menu__panel');
-
-  function activateTishaTab(activeTab) {
-    tishaTabs.forEach(function(t) {
-      t.classList.remove('is-active');
-      t.setAttribute('aria-selected', 'false');
-    });
-    tishaPanels.forEach(function(p) {
-      p.classList.remove('is-active');
-      p.setAttribute('hidden', '');
-    });
-    activeTab.classList.add('is-active');
-    activeTab.setAttribute('aria-selected', 'true');
-    var target = document.getElementById(activeTab.getAttribute('aria-controls'));
-    if (target) {
-      target.classList.add('is-active');
-      target.removeAttribute('hidden');
-    }
-  }
-
-  tishaTabs.forEach(function(tab) {
-    tab.addEventListener('click', function() { activateTishaTab(tab); });
-  });
-
-  btn.addEventListener('click', function() {
-    var isHidden = tishaSection.hasAttribute('hidden');
-    if (isHidden) {
-      tishaSection.removeAttribute('hidden');
-      mainSection.style.display = 'none';
-      btn.textContent = '✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour fermer';
-      if (!tishaSection.querySelector('.tisha__tab.is-active') && tishaTabs.length > 0) {
-        activateTishaTab(tishaTabs[0]);
-      }
-    } else {
-      tishaSection.setAttribute('hidden', '');
-      mainSection.style.display = '';
-      btn.textContent = '✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir';
-    }
-  });
+  initTishaToggle();
 });
 
