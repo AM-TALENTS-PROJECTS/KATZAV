@@ -242,7 +242,7 @@
         </div>
 
         <!-- Bandeau Tisha Beav -->
-        <button id="tisha-toggle" onclick="var p=document.getElementById('panel-tishabeav'); var isOpen=p.classList.contains('is-active'); if(isOpen){p.classList.remove('is-active');p.setAttribute('hidden','');this.textContent='✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir';}else{p.classList.add('is-active');p.removeAttribute('hidden');this.textContent='✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour fermer';}" style="background:#1B4FD8;color:#ffffff;text-align:center;padding:14px 20px;font-size:1.1rem;cursor:pointer;margin-bottom:16px;border-radius:8px;display:block;width:100%;box-sizing:border-box;border:none;">✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir</button>
+        <button id="tisha-toggle" class="tisha-toggle-btn" onclick="var p=document.getElementById('panel-tishabeav');var tw=document.querySelector('.menu__tabs-wrapper');var isOpen=p.classList.contains('is-active');if(isOpen){p.classList.remove('is-active');p.setAttribute('hidden','');tw.style.display='';this.textContent='✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir';}else{p.classList.add('is-active');p.removeAttribute('hidden');tw.style.display='none';this.textContent='✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour fermer';}">✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir</button>
 
         <!-- Navigation par onglets -->
         <div class="menu__tabs-wrapper" role="tablist" aria-label="Catégories de la carte">
@@ -632,56 +632,121 @@
         <!-- ── Panneau : Tisha Beav ── -->
         <div class="menu__panel" role="tabpanel" id="panel-tishabeav" aria-labelledby="tab-tishabeav" hidden>
 
-          <div class="tisha-header">
-            Carte spéciale disponible uniquement pendant Tisha Beav
+          <p class="menu__note" style="margin-bottom:1.5rem;">Carte spéciale disponible uniquement pendant Tisha Beav.</p>
+
+          <div class="menu__grid">
+            <article class="menu__item reveal">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Avocado Toast</h3>
+                <span class="menu__item-price">14€</span>
+              </div>
+              <p class="menu__item-desc">Pain de campagne, guacamole, concombre, saumon gravelax, oeuf poché</p>
+            </article>
+
+            <article class="menu__item reveal reveal--delay-1">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Crispy Falafel</h3>
+                <span class="menu__item-price">15€</span>
+              </div>
+              <p class="menu__item-desc">Pita crispy falafel, houmous, choux rouge, coleslaw</p>
+            </article>
+
+            <article class="menu__item reveal reveal--delay-2">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Poke Bowl Saumon</h3>
+                <span class="menu__item-price">16€</span>
+              </div>
+              <p class="menu__item-desc">Quinoa, carottes, choux, edamame, tomates cerises, tartare de saumon au fruit de la passion</p>
+            </article>
+
+            <article class="menu__item reveal reveal--delay-3">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Tataki de Thon</h3>
+                <span class="menu__item-price">18€</span>
+              </div>
+              <p class="menu__item-desc">Thon mi-cuit aux deux sésames, salade asiatique</p>
+            </article>
+
+            <article class="menu__item reveal">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Pavé de Saumon</h3>
+                <span class="menu__item-price">18€</span>
+              </div>
+              <p class="menu__item-desc">Saumon cuit à l'unilatéral, riz thaï, salade croquante</p>
+            </article>
+
+            <article class="menu__item reveal reveal--delay-1">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Fish and Chips</h3>
+                <span class="menu__item-price">18€</span>
+              </div>
+              <p class="menu__item-desc">Cabillaud en tempura, sauce tartare maison, frites fraîches, roquette, citron</p>
+            </article>
           </div>
 
-          <h3>Avocado Toast <span class="menu__price">14€</span></h3>
-          <p>Pain de campagne, guacamole, concombre, saumon gravelax, oeuf poché</p>
+          <p class="menu__category-label" style="margin:2rem 0 1rem;">Burgers <span style="font-size:0.75rem;font-weight:400;opacity:0.7;">— servis avec frites fraîches maison</span></p>
 
-          <h3>Crispy Falafel <span class="menu__price">15€</span></h3>
-          <p>Pita crispy falafel, houmous, choux rouge, coleslaw</p>
+          <div class="menu__grid">
+            <article class="menu__item reveal">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Fricassé Burger</h3>
+                <span class="menu__item-price">13€</span>
+              </div>
+              <p class="menu__item-desc">Bun sésame, thon, méchouia, olives noires, citron confit, cebettes, lamelles d'oeuf</p>
+            </article>
 
-          <h3>Poke Bowl Saumon <span class="menu__price">16€</span></h3>
-          <p>Quinoa, carottes, choux, edamame, tomates cerises, tartare de saumon au fruit de la passion</p>
+            <article class="menu__item reveal reveal--delay-1">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Brick Burger</h3>
+                <span class="menu__item-price">13€</span>
+              </div>
+              <p class="menu__item-desc">Bun sésame, méchouia, brique à l'oeuf, roquette — supplément thon +2€</p>
+            </article>
 
-          <h3>Tataki de Thon <span class="menu__price">18€</span></h3>
-          <p>Thon mi-cuit aux deux sésames, salade asiatique</p>
+            <article class="menu__item reveal reveal--delay-2">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Fish Burger</h3>
+                <span class="menu__item-price">14€</span>
+              </div>
+              <p class="menu__item-desc">Bun sésame, iceberg, tomates, mayo tartare, colin pané</p>
+            </article>
 
-          <h3>Pavé de Saumon <span class="menu__price">18€</span></h3>
-          <p>Saumon cuit à l'unilatéral, riz thaï, salade croquante</p>
+            <article class="menu__item reveal reveal--delay-3">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Tuna Burger</h3>
+                <span class="menu__item-price">16€</span>
+              </div>
+              <p class="menu__item-desc">Bun pavot, roquette, mayo curry mango, oignons confits, steak de thon</p>
+            </article>
+          </div>
 
-          <h3>Fish and Chips <span class="menu__price">18€</span></h3>
-          <p>Cabillaud en tempura, sauce tartare maison, frites fraîches, roquette, citron</p>
+          <p class="menu__category-label" style="margin:2rem 0 1rem;">Autres</p>
 
-          <hr style="margin: 24px 0;">
+          <div class="menu__grid">
+            <article class="menu__item reveal">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Pimientos del Padron</h3>
+                <span class="menu__item-price">8€</span>
+              </div>
+              <p class="menu__item-desc">Poivrons doux fleur de sel</p>
+            </article>
 
-          <h3 class="tisha-section-title">BURGERS</h3>
+            <article class="menu__item reveal reveal--delay-1">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Hot Dog Veggie</h3>
+                <span class="menu__item-price">10€</span>
+              </div>
+              <p class="menu__item-desc">Pain hot dog, moutarde US, ketchup, oignons confits maison, oignons crispy, 2 saucisses végétales</p>
+            </article>
 
-          <h3>Fricassé Burger <span class="menu__price">13€</span></h3>
-          <p>Bun sésame, Thon, Méchouia, Olives noires, Citron confit, Cebettes, Lamelles d'oeuf</p>
-
-          <h3>Brick Burger <span class="menu__price">13€</span></h3>
-          <p>Bun sésame, méchouia, brique à l'oeuf, roquette — supplément thon +2€</p>
-
-          <h3>Fish Burger <span class="menu__price">14€</span></h3>
-          <p>Bun sésame, Iceberg, Tomates, Mayo tartare, colin pané</p>
-
-          <h3>Tuna Burger <span class="menu__price">16€</span></h3>
-          <p>Bun pavot, roquette, mayo curry mango, oignons confits, steak de thon</p>
-
-          <p><em>Tous nos burgers sont accompagnés de frites fraîches maison.</em></p>
-
-          <hr style="margin: 24px 0;">
-
-          <h3>Pimientos del Padron <span class="menu__price">8€</span></h3>
-          <p>Poivrons doux fleur de sel</p>
-
-          <h3>Hot Dog Veggie <span class="menu__price">10€</span></h3>
-          <p>Pain Hot Dog, Moutarde US ketchup, Oignons confits maison, oignons crispy, 2 saucisses végétales</p>
-
-          <h3>Bagel Saumon <span class="menu__price">12€</span></h3>
-          <p>Mayo tartare, Roquette, Concombre, Guacamole, Saumon fumé</p>
+            <article class="menu__item reveal reveal--delay-2">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Bagel Saumon</h3>
+                <span class="menu__item-price">12€</span>
+              </div>
+              <p class="menu__item-desc">Mayo tartare, roquette, concombre, guacamole, saumon fumé</p>
+            </article>
+          </div>
 
         </div>
 
