@@ -112,8 +112,17 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 560px) {
+  .signatures {
+    padding: var(--spacing-xl) 0;
+  }
+
   .signatures__grid {
     grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .signatures__card {
+    padding: var(--spacing-md);
   }
 }

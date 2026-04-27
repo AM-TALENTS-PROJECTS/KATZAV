@@ -260,12 +260,29 @@
 
 /* ── Responsive ────────────────────────────────────────────────── */
 @media (max-width: 900px) {
-  .nav__links,
-  .nav__cta {
+  .nav__links {
     display: none;
   }
 
   .nav__hamburger {
     display: flex;
+  }
+
+  /* Commander reste visible sur tablette/mobile */
+  .nav__cta {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.9rem;
+    gap: 0.3rem;
+  }
+}
+
+/* Logo compact sur très petit écran */
+@media (max-width: 380px) {
+  .nav__kasher-badge {
+    display: none;
+  }
+
+  .nav__logo {
+    height: 32px;
   }
 }

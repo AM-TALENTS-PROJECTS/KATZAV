@@ -118,19 +118,3 @@ document.addEventListener('DOMContentLoaded', () => {
   initPricePulse();
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  const tishaBanner = document.getElementById('tisha-toggle');
-  const tishaPanel = document.getElementById('panel-tishabeav');
-  if (tishaBanner && tishaPanel) {
-    tishaBanner.addEventListener('click', () => {
-      const isHidden = tishaPanel.hasAttribute('hidden');
-      if (isHidden) {
-        tishaPanel.removeAttribute('hidden');
-        tishaBanner.textContent = '✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour fermer';
-      } else {
-        tishaPanel.setAttribute('hidden', '');
-        tishaBanner.textContent = '✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir';
-      }
-    });
-  }
-});

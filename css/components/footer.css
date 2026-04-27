@@ -212,6 +212,21 @@
   flex-shrink: 0;
 }
 
+/* Logo Beth-Din dans la section accès */
+.access__bethdin-logo {
+  height: 80px;
+  width: 80px;
+  object-fit: contain;
+  display: block;
+  margin-top: var(--spacing-sm);
+}
+
+/* Iframe Maps sans bordure */
+.access__map-col iframe,
+.infos__map iframe {
+  border: 0;
+}
+
 /* ── Footer principal ────────────────────────────────────────── */
 .footer {
   background-color: #0A0A0A;
@@ -401,5 +416,28 @@
   .footer__bottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  /* Touch targets min 44px */
+  .footer__nav-list a,
+  .footer__contact-item a {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .access {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .access__hours-row {
+    flex-direction: column;
+    gap: 0.2rem;
+    align-items: flex-start;
+  }
+
+  .access__hours-time {
+    text-align: left;
+    font-size: 0.8rem;
   }
 }

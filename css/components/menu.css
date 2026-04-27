@@ -174,6 +174,7 @@
 /* ── Note de bas de section ─────────────────────────────────── */
 .menu__note {
   margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-lg);
   font-family: var(--font-body);
   font-size: 0.75rem;
   color: var(--text-muted);
@@ -182,7 +183,47 @@
   padding-top: var(--spacing-md);
 }
 
+/* ── Variantes d'items ───────────────────────────────────────── */
+.menu__item--full {
+  grid-column: 1 / -1;
+  max-width: 560px;
+}
+
+.menu__item--wide {
+  max-width: 520px;
+}
+
+.menu__category-note {
+  font-size: 0.75rem;
+  font-weight: 400;
+  opacity: 0.7;
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+/* ── Label de catégorie (section Tisha Beav) ── */
+.menu__category-label {
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-dark);
+  border-bottom: 2px solid rgba(232, 0, 28, 0.15);
+  padding-bottom: 0.5rem;
+  margin: 2rem 0 1rem;
+  display: block;
+}
+
 /* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .tisha-toggle-btn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+
 @media (max-width: 600px) {
   .menu__grid {
     grid-template-columns: 1fr;
@@ -191,6 +232,10 @@
   .menu__tab {
     font-size: 0.65rem;
     padding: 0.6rem 0.8rem;
+  }
+
+  .menu__header {
+    margin-bottom: var(--spacing-md);
   }
 }
 

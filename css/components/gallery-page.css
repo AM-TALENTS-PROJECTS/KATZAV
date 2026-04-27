@@ -158,6 +158,20 @@
   .gallery-full__grid {
     columns: 2;
   }
+
+  .gallery-preview__grid {
+    gap: var(--spacing-xs);
+  }
+}
+
+@media (max-width: 560px) {
+  .gallery-preview__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-preview__item {
+    aspect-ratio: 16 / 9;
+  }
 }
 
 @media (max-width: 480px) {

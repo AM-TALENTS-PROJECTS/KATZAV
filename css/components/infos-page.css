@@ -342,4 +342,42 @@
   .infos__hours-row {
     padding: var(--spacing-sm) var(--spacing-md);
   }
+
+  .infos__order-btns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .infos__order-btn {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+
+  .infos__socials-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .infos__social-btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .infos__hours-row {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xs);
+  }
+
+  .infos__hours-time {
+    text-align: left;
+    padding-left: calc(1.5rem + var(--spacing-sm));
+  }
+
+  .infos__section-title {
+    font-size: 1.6rem;
+  }
 }

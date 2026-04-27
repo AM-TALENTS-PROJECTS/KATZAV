@@ -35,6 +35,22 @@
 @media (max-width: 768px) {
   .hero--mini {
     height: auto;
-    min-height: 260px;
+    min-height: 200px;
+  }
+
+  .hero--mini .hero__container {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .hero--mini .hero__ctas {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero--mini .hero__cta {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
   }
 }
