@@ -192,6 +192,14 @@
           <h2 class="menu__title" id="menu-title">LA CARTE</h2>
         </div>
 
+        <!-- Bouton Tisha Beav -->
+        <button id="tisha-toggle" class="tisha-toggle-btn" type="button" style="background:#1B4FD8;color:#ffffff;padding:12px 32px;font-size:1rem;font-weight:700;cursor:pointer;border-radius:8px;border:none;display:block;margin:0 0 var(--spacing-xl);letter-spacing:0.05em;">
+          ✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir
+        </button>
+
+        <!-- ── Carte normale ─────────────────────────────────────── -->
+        <div id="main-menu-section">
+
         <div class="menu__tabs-wrapper" role="tablist" aria-label="Catégories de la carte">
           <div class="menu__tabs">
             <button class="menu__tab" role="tab" aria-controls="panel-signatures"  id="tab-signatures"  aria-selected="false">Signatures</button>
@@ -546,116 +554,136 @@
           </div>
         </div>
 
-        <!-- Tisha Beav -->
-        <div class="menu__panel" role="tabpanel" id="panel-tishabeav" aria-labelledby="tab-tishabeav" hidden>
-          <p class="menu__note">Carte spéciale disponible uniquement pendant Tisha Beav.</p>
-          <div class="menu__grid">
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Avocado Toast</h3>
-                <span class="menu__item-price">14€</span>
-              </div>
-              <p class="menu__item-desc">Pain de campagne, guacamole, concombre, saumon gravelax, oeuf poché</p>
-            </article>
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Crispy Falafel</h3>
-                <span class="menu__item-price">15€</span>
-              </div>
-              <p class="menu__item-desc">Pita crispy falafel, houmous, choux rouge, coleslaw</p>
-            </article>
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Poke Bowl Saumon</h3>
-                <span class="menu__item-price">16€</span>
-              </div>
-              <p class="menu__item-desc">Quinoa, carottes, choux, edamame, tomates cerises, tartare de saumon au fruit de la passion</p>
-            </article>
-            <article class="menu__item reveal reveal--delay-3">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Tataki de Thon</h3>
-                <span class="menu__item-price">18€</span>
-              </div>
-              <p class="menu__item-desc">Thon mi-cuit aux deux sésames, salade asiatique</p>
-            </article>
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Pavé de Saumon</h3>
-                <span class="menu__item-price">18€</span>
-              </div>
-              <p class="menu__item-desc">Saumon cuit à l'unilatéral, riz thaï, salade croquante</p>
-            </article>
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Fish and Chips</h3>
-                <span class="menu__item-price">18€</span>
-              </div>
-              <p class="menu__item-desc">Cabillaud en tempura, sauce tartare maison, frites fraîches, roquette, citron</p>
-            </article>
+        </div><!-- /#main-menu-section -->
+
+        <!-- ── Section Tisha Beav ─────────────────────────────── -->
+        <div id="tisha-section" hidden>
+
+          <div class="tisha__header">
+            <span class="tisha__label">✡ Carte Spéciale</span>
+            <h2 class="tisha__title">TISHA BEAV</h2>
+            <p class="tisha__subtitle">Disponible uniquement pendant Tisha Beav · Poissons &amp; végétarien</p>
           </div>
 
-          <p class="menu__category-label">Burgers <span class="menu__category-note">— servis avec frites fraîches maison</span></p>
-          <div class="menu__grid">
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Fricassé Burger</h3>
-                <span class="menu__item-price">13€</span>
-              </div>
-              <p class="menu__item-desc">Bun sésame, thon, méchouia, olives noires, citron confit, cebettes, lamelles d'oeuf</p>
-            </article>
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Brick Burger</h3>
-                <span class="menu__item-price">13€</span>
-              </div>
-              <p class="menu__item-desc">Bun sésame, méchouia, brique à l'oeuf, roquette — supplément thon +2€</p>
-            </article>
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Fish Burger</h3>
-                <span class="menu__item-price">14€</span>
-              </div>
-              <p class="menu__item-desc">Bun sésame, iceberg, tomates, mayo tartare, colin pané</p>
-            </article>
-            <article class="menu__item reveal reveal--delay-3">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Tuna Burger</h3>
-                <span class="menu__item-price">16€</span>
-              </div>
-              <p class="menu__item-desc">Bun pavot, roquette, mayo curry mango, oignons confits, steak de thon</p>
-            </article>
+          <div class="menu__tabs-wrapper" role="tablist" aria-label="Catégories Tisha Beav">
+            <div class="menu__tabs">
+              <button class="menu__tab tisha__tab" role="tab" aria-controls="tisha-panel-plats"   id="tisha-tab-plats"   aria-selected="false">Plats</button>
+              <button class="menu__tab tisha__tab" role="tab" aria-controls="tisha-panel-burgers" id="tisha-tab-burgers" aria-selected="false">Burgers</button>
+              <button class="menu__tab tisha__tab" role="tab" aria-controls="tisha-panel-autres"  id="tisha-tab-autres"  aria-selected="false">Autres</button>
+            </div>
           </div>
 
-          <p class="menu__category-label">Autres</p>
-          <div class="menu__grid">
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Pimientos del Padron</h3>
-                <span class="menu__item-price">8€</span>
-              </div>
-              <p class="menu__item-desc">Poivrons doux fleur de sel</p>
-            </article>
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Hot Dog Veggie</h3>
-                <span class="menu__item-price">10€</span>
-              </div>
-              <p class="menu__item-desc">Pain hot dog, moutarde US, ketchup, oignons confits maison, oignons crispy, 2 saucisses végétales</p>
-            </article>
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Bagel Saumon</h3>
-                <span class="menu__item-price">12€</span>
-              </div>
-              <p class="menu__item-desc">Mayo tartare, roquette, concombre, guacamole, saumon fumé</p>
-            </article>
+          <!-- Plats Tisha Beav -->
+          <div class="menu__panel" id="tisha-panel-plats" role="tabpanel" aria-labelledby="tisha-tab-plats" hidden>
+            <div class="menu__grid">
+              <article class="menu__item">
+                <div class="menu__item-top">
+                  <h3 class="menu__item-name">Avocado Toast</h3>
+                  <span class="menu__item-price">14€</span>
+                </div>
+                <p class="menu__item-desc">Pain de campagne, guacamole, concombre, saumon gravelax, oeuf poché</p>
+              </article>
+              <article class="menu__item">
+                <div class="menu__item-top">
+                  <h3 class="menu__item-name">Crispy Falafel</h3>
+                  <span class="menu__item-price">15€</span>
+                </div>
+                <p class="menu__item-desc">Pita crispy falafel, houmous, choux rouge, coleslaw</p>
+              </article>
+              <article class="menu__item">
+                <div class="menu__item-top">
+                  <h3 class="menu__item-name">Poke Bowl Saumon</h3>
+                  <span class="menu__item-price">16€</span>
+                </div>
+                <p class="menu__item-desc">Quinoa, carottes, choux, edamame, tomates cerises, tartare de saumon au fruit de la passion</p>
+              </article>
+              <article class="menu__item">
+                <div class="menu__item-top">
+                  <h3 class="menu__item-name">Tataki de Thon</h3>
+                  <span class="menu__item-price">18€</span>
+                </div>
+                <p class="menu__item-desc">Thon mi-cuit aux deux sésames, salade asiatique</p>
+              </article>
+              <article class="menu__item">
+                <div class="menu__item-top">
+                  <h3 class="menu__item-name">Pavé de Saumon</h3>
+                  <span class="menu__item-price">18€</span>
+                </div>
+                <p class="menu__item-desc">Saumon cuit à l'unilatéral, riz thaï, salade croquante</p>
+              </article>
+              <article class="menu__item">
+                <div class="menu__item-top">
+                  <h3 class="menu__item-name">Fish and Chips</h3>
+                  <span class="menu__item-price">18€</span>
+                </div>
+                <p class="menu__item-desc">Cabillaud en tempura, sauce tartare maison, frites fraîches, roquette, citron</p>
+              </article>
+            </div>
           </div>
-        </div>
 
-        <!-- Bouton Tisha Beav -->
-        <button id="tisha-toggle" class="tisha-toggle-btn" type="button" style="background:#1B4FD8;color:#ffffff;padding:12px 32px;font-size:1rem;font-weight:700;cursor:pointer;border-radius:8px;border:none;display:block;margin:16px 0;letter-spacing:0.05em;">
-          ✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir
-        </button>
+          <!-- Burgers Tisha Beav -->
+          <div class="menu__panel" id="tisha-panel-burgers" role="tabpanel" aria-labelledby="tisha-tab-burgers" hidden>
+            <p class="menu__note">Servis avec frites fraîches maison.</p>
+            <div class="menu__grid">
+              <article class="menu__item">
+                <div class="menu__item-top">
+                  <h3 class="menu__item-name">Fricassé Burger</h3>
+                  <span class="menu__item-price">13€</span>
+                </div>
+                <p class="menu__item-desc">Bun sésame, thon, méchouia, olives noires, citron confit, cebettes, lamelles d'oeuf</p>
+              </article>
+              <article class="menu__item">
+                <div class="menu__item-top">
+                  <h3 class="menu__item-name">Brick Burger</h3>
+                  <span class="menu__item-price">13€</span>
+                </div>
+                <p class="menu__item-desc">Bun sésame, méchouia, brique à l'oeuf, roquette — supplément thon +2€</p>
+              </article>
+              <article class="menu__item">
+                <div class="menu__item-top">
+                  <h3 class="menu__item-name">Fish Burger</h3>
+                  <span class="menu__item-price">14€</span>
+                </div>
+                <p class="menu__item-desc">Bun sésame, iceberg, tomates, mayo tartare, colin pané</p>
+              </article>
+              <article class="menu__item">
+                <div class="menu__item-top">
+                  <h3 class="menu__item-name">Tuna Burger</h3>
+                  <span class="menu__item-price">16€</span>
+                </div>
+                <p class="menu__item-desc">Bun pavot, roquette, mayo curry mango, oignons confits, steak de thon</p>
+              </article>
+            </div>
+          </div>
+
+          <!-- Autres Tisha Beav -->
+          <div class="menu__panel" id="tisha-panel-autres" role="tabpanel" aria-labelledby="tisha-tab-autres" hidden>
+            <div class="menu__grid">
+              <article class="menu__item">
+                <div class="menu__item-top">
+                  <h3 class="menu__item-name">Pimientos del Padron</h3>
+                  <span class="menu__item-price">8€</span>
+                </div>
+                <p class="menu__item-desc">Poivrons doux fleur de sel</p>
+              </article>
+              <article class="menu__item">
+                <div class="menu__item-top">
+                  <h3 class="menu__item-name">Hot Dog Veggie</h3>
+                  <span class="menu__item-price">10€</span>
+                </div>
+                <p class="menu__item-desc">Pain hot dog, moutarde US, ketchup, oignons confits maison, oignons crispy, 2 saucisses végétales</p>
+              </article>
+              <article class="menu__item">
+                <div class="menu__item-top">
+                  <h3 class="menu__item-name">Bagel Saumon</h3>
+                  <span class="menu__item-price">12€</span>
+                </div>
+                <p class="menu__item-desc">Mayo tartare, roquette, concombre, guacamole, saumon fumé</p>
+              </article>
+            </div>
+          </div>
+
+        </div><!-- /#tisha-section -->
 
       </div>
     </section>

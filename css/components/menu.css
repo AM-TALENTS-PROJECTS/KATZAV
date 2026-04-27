@@ -318,3 +318,72 @@
   text-align: center;
   margin-bottom: 16px;
 }
+
+/* ── Section Tisha Beav ─────────────────────────────────────── */
+.tisha__header {
+  background: linear-gradient(135deg, #1B4FD8 0%, #1640B0 100%);
+  border-radius: 12px;
+  padding: 2rem 2.5rem;
+  margin-bottom: var(--spacing-xl);
+}
+
+.tisha__label {
+  display: block;
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 0.5rem;
+}
+
+.tisha__title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 0.95;
+  margin: 0 0 0.75rem;
+}
+
+.tisha__subtitle {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.75);
+  margin: 0;
+}
+
+/* Overrides chromatiques pour la section Tisha Beav */
+#tisha-section .menu__tabs {
+  border-bottom-color: rgba(27, 79, 216, 0.2);
+}
+
+#tisha-section .menu__tab.is-active {
+  color: #1B4FD8;
+  border-bottom-color: #1B4FD8;
+}
+
+#tisha-section .menu__tab:hover {
+  color: #1640B0;
+}
+
+#tisha-section .menu__item:hover {
+  border-color: #1B4FD8;
+  box-shadow: 0 4px 20px rgba(27, 79, 216, 0.12);
+}
+
+#tisha-section .menu__item-price {
+  color: #1B4FD8;
+}
+
+@media (max-width: 600px) {
+  .tisha__header {
+    padding: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .tisha__subtitle {
+    font-size: 0.78rem;
+  }
+}

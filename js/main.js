@@ -120,26 +120,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.addEventListener('DOMContentLoaded', function() {
   var btn = document.getElementById('tisha-toggle');
-  var panel = document.getElementById('panel-tishabeav');
-  var tabs = document.querySelector('.menu__tabs');
+  var tishaSection = document.getElementById('tisha-section');
+  var mainSection = document.getElementById('main-menu-section');
 
-  if (!btn || !panel) return;
+  if (!btn || !tishaSection || !mainSection) return;
 
-  panel.setAttribute('hidden', '');
+  var tishaTabs = tishaSection.querySelectorAll('.tisha__tab');
+  var tishaPanels = tishaSection.querySelectorAll('.menu__panel');
+
+  function activateTishaTab(activeTab) {
+    tishaTabs.forEach(function(t) {
+      t.classList.remove('is-active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    tishaPanels.forEach(function(p) {
+      p.classList.remove('is-active');
+      p.setAttribute('hidden', '');
+    });
+    activeTab.classList.add('is-active');
+    activeTab.setAttribute('aria-selected', 'true');
+    var target = document.getElementById(activeTab.getAttribute('aria-controls'));
+    if (target) {
+      target.classList.add('is-active');
+      target.removeAttribute('hidden');
+    }
+  }
+
+  tishaTabs.forEach(function(tab) {
+    tab.addEventListener('click', function() { activateTishaTab(tab); });
+  });
 
   btn.addEventListener('click', function() {
-    var isHidden = panel.hasAttribute('hidden');
-    var activePanel = document.querySelector('.menu__panel.is-active');
-
+    var isHidden = tishaSection.hasAttribute('hidden');
     if (isHidden) {
-      panel.removeAttribute('hidden');
-      if (tabs) tabs.style.display = 'none';
-      if (activePanel) activePanel.style.display = 'none';
+      tishaSection.removeAttribute('hidden');
+      mainSection.style.display = 'none';
       btn.textContent = '✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour fermer';
+      if (!tishaSection.querySelector('.tisha__tab.is-active') && tishaTabs.length > 0) {
+        activateTishaTab(tishaTabs[0]);
+      }
     } else {
-      panel.setAttribute('hidden', '');
-      if (tabs) tabs.style.display = '';
-      if (activePanel) activePanel.style.display = '';
+      tishaSection.setAttribute('hidden', '');
+      mainSection.style.display = '';
       btn.textContent = '✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir';
     }
   });
