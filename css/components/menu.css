@@ -196,16 +196,17 @@
 
 /* ── Bandeau Tisha Beav ── */
 .tisha-banner {
-  background: #1B4FD8;
-  color: #ffffff;
+  background: #1B4FD8 !important;
+  color: #ffffff !important;
   text-align: center;
   padding: 14px 20px;
-  font-family: var(--font-display);
   font-size: 1.1rem;
   letter-spacing: 0.05em;
   cursor: pointer;
   margin-bottom: 16px;
   border-radius: 8px;
+  display: block;
+  width: 100%;
 }
 
 .tisha-banner:hover {
