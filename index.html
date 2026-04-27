@@ -1,4 +1,4 @@
-?<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
@@ -6,7 +6,7 @@
 
   <!-- ── SEO primaire ───────────────────────────────────────────── -->
   <title>Katzav Delicatessen — Sandwich Gourmet Kasher | Marseille 13008</title>
-  <meta name="description" content="Katzav Delicatessen — Restaurant kasher Marseille 8. Sandwich gourmet, burgers, spécialités New-Yorkaises. Sur place, à emporter, livraison Uber Eats, Deliveroo, Nojyk.">
+  <meta name="description" content="Katzav Delicatessen, restaurant kasher Marseille 8. Sandwichs gourmets New-Yorkais, burgers, spécialités maison. Sur place, à emporter ou en livraison Uber Eats, Deliveroo. 192 Rue du Rouet.">
   <meta name="keywords" content="restaurant kasher Marseille, sandwich gourmet Marseille 8, livraison kasher Marseille, deli kasher Marseille, sandwich New Yorkais Marseille, katzav delicatessen">
   <meta name="author" content="AM Talents">
   <meta name="robots" content="index, follow">
@@ -15,7 +15,7 @@
   <!-- ── Open Graph ─────────────────────────────────────────────── -->
   <meta property="og:type" content="restaurant">
   <meta property="og:title" content="Katzav Delicatessen — Sandwich Gourmet Kasher | Marseille 13008">
-  <meta property="og:description" content="Restaurant kasher Marseille 8. Sandwichs gourmets, burgers, spécialités New-Yorkaises. Livraison Uber Eats & Deliveroo. 192 Rue du Rouet.">
+  <meta property="og:description" content="Restaurant kasher Marseille 8. Sandwichs gourmets, burgers, spécialités New-Yorkaises. Livraison Uber Eats, Deliveroo, Nojyk. 192 Rue du Rouet.">
   <meta property="og:url" content="https://katzav-delicatessen.fr/">
   <meta property="og:image" content="https://katzav-delicatessen.fr/assets/logo/katzav-logo.png">
   <meta property="og:image:width" content="1200">
@@ -33,7 +33,7 @@
   <link rel="icon" type="image/png" href="assets/logo/katzav-logo.png">
   <link rel="apple-touch-icon" href="assets/logo/katzav-logo.png">
 
-  <!-- ── Font Awesome (icônes) ─────────────────────────────────── -->
+  <!-- ── Font Awesome ─────────────────────────────────────────────── -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- ── Google Fonts ───────────────────────────────────────────── -->
@@ -45,10 +45,10 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/components/nav.css">
   <link rel="stylesheet" href="css/components/hero.css">
-  <link rel="stylesheet" href="css/components/menu.css">
   <link rel="stylesheet" href="css/components/compo.css">
-  <link rel="stylesheet" href="css/components/gallery.css">
   <link rel="stylesheet" href="css/components/footer.css">
+  <link rel="stylesheet" href="css/components/signatures.css">
+  <link rel="stylesheet" href="css/components/gallery-page.css">
 
   <!-- ── Schema.org JSON-LD ─────────────────────────────────────── -->
   <script type="application/ld+json">
@@ -105,39 +105,31 @@
 
 <body>
 
-  <!-- Lien d'évitement accessibilité -->
   <a href="#main-content" class="skip-link">Aller au contenu principal</a>
 
   <!-- ════════════════════════════════════════════════════════════
-       NAV — Barre de navigation sticky
+       NAV
        ════════════════════════════════════════════════════════════ -->
   <header role="banner">
     <nav class="nav" aria-label="Navigation principale">
       <div class="nav__container">
 
-        <!-- Logo / Marque -->
-        <a href="/" class="nav__brand" aria-label="Katzav Delicatessen — Accueil">
+        <a href="index.html" class="nav__brand" aria-label="Katzav Delicatessen — Accueil">
           <div class="nav__logos">
             <img src="assets/logo/katzav-logo.png" alt="Katzav Delicatessen" class="nav__logo" width="120" height="40">
           </div>
           <span class="nav__kasher-badge">Kasher — Beth-Din de Marseille</span>
         </a>
 
-        <!-- Liens desktop -->
         <ul class="nav__links" role="list">
-          <li><a href="#menu">Menu</a></li>
-          <li><a href="#compo">La Compo</a></li>
-          <li><a href="#galerie">Galerie</a></li>
-          <li><a href="#horaires">Horaires</a></li>
-          <li><a href="#acces">Nous trouver</a></li>
+          <li><a href="index.html" class="is-active">Accueil</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="galerie.html">Galerie</a></li>
+          <li><a href="infos.html">Horaires &amp; Accès</a></li>
         </ul>
 
-        <!-- CTA Commander -->
-        <a href="#livraison" class="nav__cta" data-scroll-to="livraison">
-          Commander
-        </a>
+        <a href="menu.html" class="nav__cta">Commander</a>
 
-        <!-- Hamburger mobile -->
         <button
           class="nav__hamburger"
           aria-label="Ouvrir le menu"
@@ -153,16 +145,14 @@
       </div>
     </nav>
 
-    <!-- Menu mobile -->
     <div class="nav__mobile" id="mobile-menu" role="dialog" aria-label="Menu mobile">
       <ul class="nav__mobile-links" role="list">
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#compo">La Compo</a></li>
-        <li><a href="#galerie">Galerie</a></li>
-        <li><a href="#horaires">Horaires</a></li>
-        <li><a href="#acces">Nous trouver</a></li>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="infos.html">Horaires &amp; Accès</a></li>
       </ul>
-      <a href="#livraison" class="nav__mobile-cta">Commander</a>
+      <a href="menu.html" class="nav__mobile-cta">Commander</a>
     </div>
   </header>
 
@@ -172,14 +162,13 @@
   <main id="main-content">
 
     <!-- ─────────────────────────────────────────────────────────
-         HERO — Section d'accroche
+         HERO
          ───────────────────────────────────────────────────────── -->
     <section class="hero" aria-label="Katzav Delicatessen — Sandwich gourmet kasher Marseille">
       <img src="assets/photos/hero-bg.png" alt="" class="hero__bg" aria-hidden="true">
       <div class="hero__blob" aria-hidden="true"></div>
 
       <div class="hero__container">
-        <!-- Accroche -->
         <p class="hero__eyebrow"><strong>Katzav Delicatessen</strong> · Restaurant kasher · Marseille 8ème</p>
 
         <h1 class="hero__headline">T'AS FAIM ?</h1>
@@ -188,17 +177,14 @@
           Sandwich gourmet kasher · Marseille 8ème
         </p>
 
-        <!-- Badge kasher -->
         <p class="hero__kasher">
           Sous surveillance Beth-Din de Marseille
         </p>
 
-        <!-- CTA livraison -->
         <div class="hero__ctas" id="livraison">
           <a
             href="https://www.ubereats.com/fr/store/katzav-delicatessen/f46qpOwvSsSdyJYi37Uuaw"
             class="hero__cta hero__cta--primary"
-            id="ubereats-link"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Commander sur Uber Eats — Katzav Delicatessen"
@@ -209,7 +195,6 @@
           <a
             href="https://deliveroo.fr/fr/menu/marseille/marseille-menpenti/dk-pizza"
             class="hero__cta hero__cta--secondary"
-            id="deliveroo-link"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Commander sur Deliveroo — Katzav Delicatessen"
@@ -231,526 +216,51 @@
     </section>
 
     <!-- ─────────────────────────────────────────────────────────
-         MENU — La Carte complète par onglets
+         NOS SIGNATURES
          ───────────────────────────────────────────────────────── -->
-    <section class="menu" id="menu" aria-labelledby="menu-title">
-      <div class="menu__container">
+    <section class="signatures" aria-labelledby="signatures-title">
+      <div class="signatures__container">
 
-        <div class="menu__header reveal">
-          <span class="menu__section-label">Katzav Delicatessen</span>
-          <h2 class="menu__title" id="menu-title">LA CARTE</h2>
+        <div class="signatures__header reveal">
+          <span class="signatures__label">Katzav Delicatessen</span>
+          <h2 class="signatures__title" id="signatures-title">NOS SIGNATURES</h2>
         </div>
 
-        <!-- Navigation par onglets -->
-        <div class="menu__tabs-wrapper" role="tablist" aria-label="Catégories de la carte">
-          <div class="menu__tabs">
-            <button class="menu__tab" role="tab" aria-controls="panel-signatures"    id="tab-signatures"    aria-selected="false">Signatures</button>
-            <button class="menu__tab" role="tab" aria-controls="panel-classiques"    id="tab-classiques"    aria-selected="false">Classiques</button>
-            <button class="menu__tab" role="tab" aria-controls="panel-specialites"   id="tab-specialites"   aria-selected="false">Spécialités</button>
-            <button class="menu__tab" role="tab" aria-controls="panel-burgers"       id="tab-burgers"       aria-selected="false">Burgers</button>
-            <button class="menu__tab" role="tab" aria-controls="panel-baguette"      id="tab-baguette"      aria-selected="false">Baguette Charcuterie</button>
-            <button class="menu__tab" role="tab" aria-controls="panel-starters"      id="tab-starters"      aria-selected="false">Starters</button>
-            <button class="menu__tab" role="tab" aria-controls="panel-bagel"         id="tab-bagel"         aria-selected="false">Bagel &amp; Hot-Dog</button>
-            <button class="menu__tab" role="tab" aria-controls="panel-plats"         id="tab-plats"         aria-selected="false">Plats</button>
-            <button class="menu__tab" role="tab" aria-controls="panel-salade"        id="tab-salade"        aria-selected="false">Salade</button>
-            <button class="menu__tab" role="tab" aria-controls="panel-desserts"      id="tab-desserts"      aria-selected="false">Desserts</button>
-            <button class="menu__tab" role="tab" aria-controls="panel-kid"           id="tab-kid"           aria-selected="false">Menu Kid</button>
-          </div>
-        </div>
+        <div class="signatures__grid">
 
-        <!-- ── Panneau : Sandwichs Signatures ── -->
-        <div class="menu__panel" id="panel-signatures" role="tabpanel" aria-labelledby="tab-signatures" hidden>
-          <div class="menu__grid">
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Le K</h3>
-                <span class="menu__item-price">13€</span>
-              </div>
-              <p class="menu__item-desc">Pain classique, dinde fumée, pastrami de bœuf, salade, coleslaw, mayo maison</p>
-            </article>
+          <article class="signatures__card reveal">
+            <h3 class="signatures__card-name">Le K</h3>
+            <span class="signatures__card-price">13€</span>
+            <p class="signatures__card-desc">Pain classique, dinde fumée, pastrami de bœuf, salade, coleslaw, mayo maison</p>
+          </article>
 
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Le ATZ</h3>
-                <span class="menu__item-price">14€</span>
-              </div>
-              <p class="menu__item-desc">Pain sésame, dinde fumée, pickles de bœuf, salade, confit d'oignons, oignons crispy, mayo maison, sauce moutarde miel</p>
-            </article>
+          <article class="signatures__card reveal reveal--delay-1">
+            <h3 class="signatures__card-name">Le ATZ</h3>
+            <span class="signatures__card-price">14€</span>
+            <p class="signatures__card-desc">Pain sésame, dinde fumée, pickles de bœuf, salade, confit d'oignons, oignons crispy, mayo maison, sauce moutarde miel</p>
+          </article>
 
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Le AV</h3>
-                <span class="menu__item-price">15€</span>
-              </div>
-              <p class="menu__item-desc">Pain pavot, dinde fumée, pickles de bœuf New Yorkais, rosette, choux rouge, cornichons, confit d'oignons, mayo maison, sauce moutarde miel</p>
-            </article>
+          <article class="signatures__card reveal reveal--delay-2">
+            <h3 class="signatures__card-name">Le AV</h3>
+            <span class="signatures__card-price">15€</span>
+            <p class="signatures__card-desc">Pain pavot, dinde fumée, pickles de bœuf New Yorkais, rosette, choux rouge, cornichons, confit d'oignons, mayo maison, sauce moutarde miel</p>
+          </article>
 
-            <article class="menu__item reveal reveal--delay-3">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Le KATZAV</h3>
-                <span class="menu__item-price">16€</span>
-              </div>
-              <p class="menu__item-desc">Pain olives noires, dinde fumée, mandoline de veau, pickles de bœuf NY, rosette, salade, guacamole, confit d'oignons, mayo truffée maison</p>
-            </article>
-          </div>
-        </div>
-
-        <!-- ── Panneau : Sandwichs Classiques ── -->
-        <div class="menu__panel" id="panel-classiques" role="tabpanel" aria-labelledby="tab-classiques" hidden>
-          <div class="menu__grid">
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">L'Americano</h3>
-                <span class="menu__item-price">13€</span>
-              </div>
-              <p class="menu__item-desc">Steak, frite, sauce au choix</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Chicken</h3>
-                <span class="menu__item-price">14€</span>
-              </div>
-              <p class="menu__item-desc">Poulet pané, frite, sauce au choix</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Merguez</h3>
-                <span class="menu__item-price">15€</span>
-              </div>
-              <p class="menu__item-desc">Merguez, frite, sauce au choix</p>
-            </article>
-          </div>
-        </div>
-
-        <!-- ── Panneau : Spécialités ── -->
-        <div class="menu__panel" id="panel-specialites" role="tabpanel" aria-labelledby="tab-specialites" hidden>
-          <div class="menu__grid">
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Atzado</h3>
-                <span class="menu__item-price">18€</span>
-              </div>
-              <p class="menu__item-desc">Roquette, effiloché de bœuf, cornichons, sauce Katzav</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Katz Chicken</h3>
-                <span class="menu__item-price">17€</span>
-              </div>
-              <p class="menu__item-desc">Coleslaw, schwarma, confit d'oignons, oignons crispy, sauce Katzav</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Pita Crispy</h3>
-                <span class="menu__item-price">18€</span>
-              </div>
-              <p class="menu__item-desc">Pita panée, houmous, choux, coleslaw, schwarma, falafel</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-3">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Le Halla Pastrami</h3>
-                <span class="menu__item-price">16€</span>
-              </div>
-              <p class="menu__item-desc">Roquette, confit d'oignons, oignons crispy, pastrami grillé, moutarde miel</p>
-            </article>
-          </div>
-        </div>
-
-        <!-- ── Panneau : Burgers ── -->
-        <div class="menu__panel" id="panel-burgers" role="tabpanel" aria-labelledby="tab-burgers" hidden>
-          <p class="menu__note" style="margin-bottom: 1.5rem;">Tous les burgers sont servis avec frites fraîches maison.</p>
-          <div class="menu__grid">
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Classic Burger</h3>
-                <span class="menu__item-price">15€</span>
-              </div>
-              <p class="menu__item-desc">Salade, tomate, oignons rouges, steak, sauce Katzav</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Big Burger</h3>
-                <span class="menu__item-price">18€</span>
-              </div>
-              <p class="menu__item-desc">Salade, tomates, confit d'oignons, steak, œuf, dinde grillée, sauce Katzav</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Classic Chicken</h3>
-                <span class="menu__item-price">14€</span>
-              </div>
-              <p class="menu__item-desc">Salade, tomates, oignons rouges, poulet pané, sauce moutarde miel</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-3">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Big Chicken</h3>
-                <span class="menu__item-price">17€</span>
-              </div>
-              <p class="menu__item-desc">Salade, tomates, confit d'oignons, œuf, pastrami grillé, sauce moutarde miel</p>
-            </article>
-          </div>
-        </div>
-
-        <!-- ── Panneau : Baguette Charcuterie ── -->
-        <div class="menu__panel" id="panel-baguette" role="tabpanel" aria-labelledby="tab-baguette" hidden>
-          <div class="menu__grid">
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Le Full Rosette</h3>
-                <span class="menu__item-price">16€</span>
-              </div>
-              <p class="menu__item-desc">Roquette, rosette, cornichon, sauce moutarde miel</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Le Full Mandoline</h3>
-                <span class="menu__item-price">17€</span>
-              </div>
-              <p class="menu__item-desc">Roquette, veau à l'os, cornichon, sauce tartare</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Le Full Mix</h3>
-                <span class="menu__item-price">18€</span>
-              </div>
-              <p class="menu__item-desc">Roquette, rosette, veau à l'os, cornichon, sauce tartare</p>
-            </article>
-          </div>
-        </div>
-
-        <!-- ── Panneau : Starters ── -->
-        <div class="menu__panel" id="panel-starters" role="tabpanel" aria-labelledby="tab-starters" hidden>
-          <div class="menu__grid">
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Houmous Bassar</h3>
-                <span class="menu__item-price">16€</span>
-              </div>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Arayes ×3</h3>
-                <span class="menu__item-price">15€</span>
-              </div>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Assiette Merguez ×4</h3>
-                <span class="menu__item-price">15€</span>
-              </div>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-3">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Piment del Padron</h3>
-                <span class="menu__item-price">8€</span>
-              </div>
-            </article>
-
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Onion Rings ×6</h3>
-                <span class="menu__item-price">8€</span>
-              </div>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Chicken Nuggets ×5</h3>
-                <span class="menu__item-price">8€</span>
-              </div>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Plateau de charcuterie</h3>
-                <span class="menu__item-price">25€</span>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <!-- ── Panneau : Bagel & Hot-Dog ── -->
-        <div class="menu__panel" id="panel-bagel" role="tabpanel" aria-labelledby="tab-bagel" hidden>
-          <div class="menu__grid">
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Bagel Dinde</h3>
-                <span class="menu__item-price">12€</span>
-              </div>
-              <p class="menu__item-desc">Salade, cornichons, dinde, sauce Katzav</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Bagel Saumon</h3>
-                <span class="menu__item-price">12€</span>
-              </div>
-              <p class="menu__item-desc">Roquette, guacamole, concombres, tartare</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Hot-Dog</h3>
-                <span class="menu__item-price">10€</span>
-              </div>
-            </article>
-          </div>
-        </div>
-
-
-        <!-- ── Panneau : Plats ── -->
-        <div class="menu__panel" id="panel-plats" role="tabpanel" aria-labelledby="tab-plats" hidden>
-          <p class="menu__note" style="margin-bottom: 1.5rem;">Tous les plats sont servis avec frites fraîches maison et salade.</p>
-          <div class="menu__grid">
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Entrecôte</h3>
-                <span class="menu__item-price">30€</span>
-              </div>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Assado</h3>
-                <span class="menu__item-price">22€</span>
-              </div>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Schwarma</h3>
-                <span class="menu__item-price">18€</span>
-              </div>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-3">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Steak à cheval</h3>
-                <span class="menu__item-price">15€</span>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <!-- ── Panneau : Salade ── -->
-        <div class="menu__panel" id="panel-salade" role="tabpanel" aria-labelledby="tab-salade" hidden>
-          <div class="menu__grid">
-            <article class="menu__item reveal" style="grid-column: 1 / -1; max-width: 560px;">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Salade maison</h3>
-                <span class="menu__item-price">16€</span>
-              </div>
-              <p class="menu__item-desc">
-                Base : salade, tomate cerise, oignons rouges, maïs, avocat<br>
-                <strong>Protéines au choix :</strong> poulet pané · saumon fumé · dinde
-              </p>
-            </article>
-          </div>
-        </div>
-
-        <!-- ── Panneau : Dessert & Boissons ── -->
-        <div class="menu__panel" id="panel-desserts" role="tabpanel" aria-labelledby="tab-desserts" hidden>
-          <div class="menu__grid">
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Bagel Choco Speculoos</h3>
-                <span class="menu__item-price">8€</span>
-              </div>
-              <p class="menu__item-desc">Bagel garni de pâte à tartiner et brisure de speculoos</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Soda</h3>
-                <span class="menu__item-price">3€</span>
-              </div>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Eau / Eau gazeuse</h3>
-                <span class="menu__item-price">2,5€</span>
-              </div>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-3">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Bière</h3>
-                <span class="menu__item-price">4€</span>
-              </div>
-            </article>
-
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Café</h3>
-                <span class="menu__item-price">2€</span>
-              </div>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Vin</h3>
-                <span class="menu__item-price">À la demande</span>
-              </div>
-            </article>
-          </div>
-        </div>
-
-        <!-- ── Panneau : Menu Kid ── -->
-        <div class="menu__panel" id="panel-kid" role="tabpanel" aria-labelledby="tab-kid" hidden>
-          <div class="menu__grid">
-            <article class="menu__item reveal" style="max-width: 520px;">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Menu Kid</h3>
-                <span class="menu__item-price">12€</span>
-              </div>
-              <p class="menu__item-desc">
-                Au choix : Nuggets + frite <em>ou</em> Burger + frite<br>
-                + Boisson Capri Sun<br>
-                + Dessert du moment
-              </p>
-            </article>
-          </div>
-        </div>
-
-        <!-- ── Panneau : Tisha Beav ── -->
-        <div class="menu__panel" role="tabpanel" id="panel-tishabeav" aria-labelledby="tab-tishabeav" hidden>
-
-          <p class="menu__note" style="margin-bottom:1.5rem;">Carte spéciale disponible uniquement pendant Tisha Beav.</p>
-
-          <div class="menu__grid">
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Avocado Toast</h3>
-                <span class="menu__item-price">14€</span>
-              </div>
-              <p class="menu__item-desc">Pain de campagne, guacamole, concombre, saumon gravelax, oeuf poché</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Crispy Falafel</h3>
-                <span class="menu__item-price">15€</span>
-              </div>
-              <p class="menu__item-desc">Pita crispy falafel, houmous, choux rouge, coleslaw</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Poke Bowl Saumon</h3>
-                <span class="menu__item-price">16€</span>
-              </div>
-              <p class="menu__item-desc">Quinoa, carottes, choux, edamame, tomates cerises, tartare de saumon au fruit de la passion</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-3">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Tataki de Thon</h3>
-                <span class="menu__item-price">18€</span>
-              </div>
-              <p class="menu__item-desc">Thon mi-cuit aux deux sésames, salade asiatique</p>
-            </article>
-
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Pavé de Saumon</h3>
-                <span class="menu__item-price">18€</span>
-              </div>
-              <p class="menu__item-desc">Saumon cuit à l'unilatéral, riz thaï, salade croquante</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Fish and Chips</h3>
-                <span class="menu__item-price">18€</span>
-              </div>
-              <p class="menu__item-desc">Cabillaud en tempura, sauce tartare maison, frites fraîches, roquette, citron</p>
-            </article>
-          </div>
-
-          <p class="menu__category-label" style="margin:2rem 0 1rem;">Burgers <span style="font-size:0.75rem;font-weight:400;opacity:0.7;">— servis avec frites fraîches maison</span></p>
-
-          <div class="menu__grid">
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Fricassé Burger</h3>
-                <span class="menu__item-price">13€</span>
-              </div>
-              <p class="menu__item-desc">Bun sésame, thon, méchouia, olives noires, citron confit, cebettes, lamelles d'oeuf</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Brick Burger</h3>
-                <span class="menu__item-price">13€</span>
-              </div>
-              <p class="menu__item-desc">Bun sésame, méchouia, brique à l'oeuf, roquette — supplément thon +2€</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Fish Burger</h3>
-                <span class="menu__item-price">14€</span>
-              </div>
-              <p class="menu__item-desc">Bun sésame, iceberg, tomates, mayo tartare, colin pané</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-3">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Tuna Burger</h3>
-                <span class="menu__item-price">16€</span>
-              </div>
-              <p class="menu__item-desc">Bun pavot, roquette, mayo curry mango, oignons confits, steak de thon</p>
-            </article>
-          </div>
-
-          <p class="menu__category-label" style="margin:2rem 0 1rem;">Autres</p>
-
-          <div class="menu__grid">
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Pimientos del Padron</h3>
-                <span class="menu__item-price">8€</span>
-              </div>
-              <p class="menu__item-desc">Poivrons doux fleur de sel</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Hot Dog Veggie</h3>
-                <span class="menu__item-price">10€</span>
-              </div>
-              <p class="menu__item-desc">Pain hot dog, moutarde US, ketchup, oignons confits maison, oignons crispy, 2 saucisses végétales</p>
-            </article>
-
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Bagel Saumon</h3>
-                <span class="menu__item-price">12€</span>
-              </div>
-              <p class="menu__item-desc">Mayo tartare, roquette, concombre, guacamole, saumon fumé</p>
-            </article>
-          </div>
+          <article class="signatures__card reveal reveal--delay-3">
+            <h3 class="signatures__card-name">Le KATZAV</h3>
+            <span class="signatures__card-price">16€</span>
+            <p class="signatures__card-desc">Pain olives noires, dinde fumée, mandoline de veau, pickles de bœuf NY, rosette, salade, guacamole, confit d'oignons, mayo truffée maison</p>
+          </article>
 
         </div>
 
-        <!-- Bouton Tisha Beav -->
-        <button id="tisha-toggle" style="background:#1B4FD8;color:#ffffff;padding:10px 24px;font-size:0.95rem;font-weight:700;cursor:pointer;border-radius:8px;border:none;display:block;margin:16px 0 0 0;letter-spacing:0.05em;" onclick="var p=document.getElementById('panel-tishabeav');var tw=document.querySelector('.menu__tabs-wrapper');var tabs=document.querySelector('.menu__tabs');var activePanel=document.querySelector('.menu__panel.is-active');var hidden=p.hasAttribute('hidden');if(hidden){p.removeAttribute('hidden');p.classList.add('is-active');if(tw)tw.style.display='none';if(tabs)tabs.style.display='none';if(activePanel)activePanel.style.display='none';this.textContent='✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour fermer';}else{p.setAttribute('hidden','');p.classList.remove('is-active');if(tw)tw.style.display='';if(tabs)tabs.style.display='';if(activePanel)activePanel.style.display='';this.textContent='✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir';}">✡ CARTE SPÉCIALE TISHA BEAV — Cliquez pour voir</button>
+        <div class="signatures__cta reveal">
+          <a href="menu.html" class="signatures__cta-btn">
+            Voir la carte complète →
+          </a>
+        </div>
 
-      </div><!-- /.menu__container -->
+      </div>
     </section>
 
     <!-- ─────────────────────────────────────────────────────────
@@ -763,18 +273,15 @@
           <h2 class="compo__title" id="compo-title">LA COMPO<br>DE TES RÊVES</h2>
           <p class="compo__subtitle">Compose ton sandwich idéal — c'est une simulation !</p>
 
-          <!-- Prix total en temps réel -->
           <div class="compo__price-display" aria-live="polite" aria-label="Prix total de votre compo">
             <span class="compo__price-label">Prix indicatif</span>
             <span class="compo__price-total" id="compo-price">14€</span>
           </div>
         </div>
 
-        <!-- Étapes — remplies dynamiquement par compo-builder.js -->
         <div class="compo__steps" role="form" aria-label="Configurez votre sandwich">
         </div>
 
-        <!-- CTA final -->
         <div class="compo__footer">
           <p class="compo__footer-text">
             Cette simulation est là pour t'inspirer. Pour commander ta Compo, appelle-nous ou passe sur place — on s'occupe du reste.
@@ -788,171 +295,67 @@
     </section>
 
     <!-- ─────────────────────────────────────────────────────────
-         GALERIE — Photos du restaurant
+         APERÇU GALERIE (4 premières photos)
          ───────────────────────────────────────────────────────── -->
-    <section class="gallery" id="galerie" aria-labelledby="gallery-title">
-      <div class="gallery__container">
+    <section class="gallery-preview" aria-labelledby="gallery-preview-title">
+      <div class="gallery-preview__container">
 
-        <div class="gallery__header">
-          <div>
-            <span class="gallery__section-label">Nos créations</span>
-            <h2 class="gallery__title" id="gallery-title">MIAM</h2>
-          </div>
+        <div class="gallery-preview__header reveal">
+          <span class="gallery-preview__label">Nos créations</span>
+          <h2 class="gallery-preview__title" id="gallery-preview-title">NOS CRÉATIONS</h2>
         </div>
 
-        <!-- Grille 12 photos -->
-        <div class="gallery__grid" aria-label="Galerie photos Katzav Delicatessen">
+        <div class="gallery-preview__grid">
 
-          <div class="gallery__item">
+          <div class="gallery-preview__item reveal">
             <img
               src="assets/photos/sandwich-le-katzav3.png"
-              alt="Le Katzav — sandwich gourmet kasher, pain olives noires, veau, pickles de boeuf"
+              alt="Le Katzav — sandwich gourmet kasher, pain olives noires, veau, pickles de bœuf"
               loading="lazy"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              onerror="this.style.display='none';"
             >
-            <div class="gallery__item-placeholder" style="display:none;" aria-hidden="true">
-              <span class="gallery__item-placeholder-text">sandwich-le-katzav3.png</span>
-            </div>
           </div>
 
-          <div class="gallery__item">
+          <div class="gallery-preview__item reveal reveal--delay-1">
             <img
               src="assets/photos/ambiance-1.png"
               alt="Intérieur du restaurant Katzav Delicatessen, Marseille 8ème"
               loading="lazy"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              onerror="this.style.display='none';"
             >
-            <div class="gallery__item-placeholder" style="display:none;" aria-hidden="true">
-              <span class="gallery__item-placeholder-text">ambiance-1.png</span>
-            </div>
           </div>
 
-          <div class="gallery__item">
+          <div class="gallery-preview__item reveal reveal--delay-2">
             <img
               src="assets/photos/burger-big-burger.png"
               alt="Big Burger kasher — steak, dinde grillée, confit d'oignons, sauce Katzav"
               loading="lazy"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              onerror="this.style.display='none';"
             >
-            <div class="gallery__item-placeholder" style="display:none;" aria-hidden="true">
-              <span class="gallery__item-placeholder-text">burger-big-burger.png</span>
-            </div>
           </div>
 
-          <div class="gallery__item">
+          <div class="gallery-preview__item reveal reveal--delay-3">
             <img
               src="assets/photos/ambiance-2.png"
               alt="Ambiance Katzav Delicatessen, restaurant kasher Marseille"
               loading="lazy"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+              onerror="this.style.display='none';"
             >
-            <div class="gallery__item-placeholder" style="display:none;" aria-hidden="true">
-              <span class="gallery__item-placeholder-text">ambiance-2.png</span>
-            </div>
           </div>
 
-          <div class="gallery__item">
-            <img
-              src="assets/photos/sandwich-le-atzado.png"
-              alt="Atzado — effiloché de boeuf, roquette, sauce Katzav"
-              loading="lazy"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="gallery__item-placeholder" style="display:none;" aria-hidden="true">
-              <span class="gallery__item-placeholder-text">sandwich-le-atzado.png</span>
-            </div>
-          </div>
+        </div>
 
-          <div class="gallery__item">
-            <img
-              src="assets/photos/sandwich-pita-crispy.png"
-              alt="Pita Crispy — houmous, schwarma, falafel, coleslaw"
-              loading="lazy"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="gallery__item-placeholder" style="display:none;" aria-hidden="true">
-              <span class="gallery__item-placeholder-text">sandwich-pita-crispy.png</span>
-            </div>
-          </div>
+        <div class="gallery-preview__cta reveal">
+          <a href="galerie.html" class="gallery-preview__cta-btn">
+            Voir toutes les photos →
+          </a>
+        </div>
 
-          <div class="gallery__item">
-            <img
-              src="assets/photos/sandwich-le-av.png"
-              alt="Le AV — pain pavot, dinde fumée, pickles de boeuf New Yorkais, rosette"
-              loading="lazy"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="gallery__item-placeholder" style="display:none;" aria-hidden="true">
-              <span class="gallery__item-placeholder-text">sandwich-le-av.png</span>
-            </div>
-          </div>
-
-          <div class="gallery__item">
-            <img
-              src="assets/photos/sandwich-halla-pastrami.png"
-              alt="Le Halla Pastrami — roquette, pastrami grillé, confit d'oignons, moutarde miel"
-              loading="lazy"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="gallery__item-placeholder" style="display:none;" aria-hidden="true">
-              <span class="gallery__item-placeholder-text">sandwich-halla-pastrami.png</span>
-            </div>
-          </div>
-
-          <div class="gallery__item">
-            <img
-              src="assets/photos/sandwich-le-chicken.png"
-              alt="Sandwich Chicken kasher — poulet pané, frite, sauce maison"
-              loading="lazy"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="gallery__item-placeholder" style="display:none;" aria-hidden="true">
-              <span class="gallery__item-placeholder-text">sandwich-le-chicken.png</span>
-            </div>
-          </div>
-
-          <div class="gallery__item">
-            <img
-              src="assets/photos/ambiance-3.png"
-              alt="Équipe Katzav Delicatessen, restaurant kasher Marseille 8"
-              loading="lazy"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="gallery__item-placeholder" style="display:none;" aria-hidden="true">
-              <span class="gallery__item-placeholder-text">ambiance-3.png</span>
-            </div>
-          </div>
-
-          <div class="gallery__item">
-            <img
-              src="assets/photos/sandwich-le-full-mix.png"
-              alt="Le Full Mix — roquette, rosette, veau à l'os, cornichon, sauce tartare"
-              loading="lazy"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="gallery__item-placeholder" style="display:none;" aria-hidden="true">
-              <span class="gallery__item-placeholder-text">sandwich-le-full-mix.png</span>
-            </div>
-          </div>
-
-          <div class="gallery__item">
-            <img
-              src="assets/photos/ambiance-4.png"
-              alt="Ambiance soirée chez Katzav Delicatessen, 192 Rue du Rouet Marseille"
-              loading="lazy"
-              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-            >
-            <div class="gallery__item-placeholder" style="display:none;" aria-hidden="true">
-              <span class="gallery__item-placeholder-text">ambiance-4.png</span>
-            </div>
-          </div>
-
-        </div><!-- /.gallery__grid -->
       </div>
     </section>
 
     <!-- ─────────────────────────────────────────────────────────
-         HORAIRES & ACCÈS
+         HORAIRES & ACCÈS — version résumée
          ───────────────────────────────────────────────────────── -->
     <section class="access" id="horaires" aria-labelledby="access-title">
       <div class="access__container">
@@ -964,26 +367,22 @@
 
         <div class="access__grid">
 
-          <!-- Colonne horaires -->
           <div class="access__hours reveal">
             <h3 class="access__hours-title">Horaires d'ouverture</h3>
 
             <div class="access__hours-list">
               <div class="access__hours-row">
                 <span class="access__hours-day">Lundi – Jeudi</span>
-                <span class="access__hours-time">11h00–14h30 / 18h00–22h00</span>
+                <span class="access__hours-time">11h00–14h30 / 18h00–22h30</span>
               </div>
-
               <div class="access__hours-row">
                 <span class="access__hours-day">Vendredi</span>
-                <span class="access__hours-time">11h00–15h00 seulement</span>
+                <span class="access__hours-time">11h00–14h30 seulement</span>
               </div>
-
               <div class="access__hours-row access__hours-row--shabat">
                 <span class="access__hours-day">Samedi (post-Shabat)</span>
                 <span class="access__hours-time">1h après fin du Shabat → 03h00</span>
               </div>
-
               <div class="access__hours-row">
                 <span class="access__hours-day">Dimanche</span>
                 <span class="access__hours-time">11h00–14h30 / 18h00–22h30</span>
@@ -994,8 +393,7 @@
               Les horaires du samedi varient selon l'heure de sortie du Shabat au fil des semaines.
             </p>
 
-            <!-- Modes de service -->
-            <div class="access__modes" aria-label="Modes de service disponibles">
+            <div class="access__modes" aria-label="Modes de service">
               <span class="access__mode-badge">Sur place</span>
               <span class="access__mode-badge">À emporter</span>
               <a href="https://www.ubereats.com/fr/store/katzav-delicatessen/f46qpOwvSsSdyJYi37Uuaw" class="access__mode-badge" target="_blank" rel="noopener noreferrer">Uber Eats</a>
@@ -1003,40 +401,21 @@
               <a href="https://nojyk.com/get-menu?restaurant=FR130KXIP&deliveryMode=DEL" class="access__mode-badge" target="_blank" rel="noopener noreferrer">Nojyk</a>
             </div>
 
-            <!-- Réseaux sociaux -->
-            <div class="access__socials" aria-label="Réseaux sociaux Katzav Delicatessen">
-              <a
-                href="https://www.instagram.com/katzav_delicatessen"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="access__social-btn"
-                aria-label="Suivre Katzav Delicatessen sur Instagram"
-              >
-                Instagram
-              </a>
-              <a
-                href="https://www.facebook.com/Katzavdelicatessen"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="access__social-btn"
-                aria-label="Suivre Katzav Delicatessen sur Facebook"
-              >
-                Facebook
-              </a>
+            <div class="access__socials" aria-label="Liens pratiques">
+              <a href="infos.html" class="access__social-btn">Plus d'infos pratiques →</a>
             </div>
           </div>
 
-          <!-- Colonne carte / infos -->
           <div class="access__map-col reveal reveal--delay-2" id="acces">
-            <!-- Google Maps iframe — remplacer src par l'URL réelle -->
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2904.845104073469!2d5.392808412380955!3d43.27562077664828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12c9b8aa3da8a2e3%3A0xd648ae573c1430bd!2s192%20Rue%20du%20Rouet%2C%2013008%20Marseille!5e0!3m2!1sfr!2sfr!4v1775571557191!5m2!1sfr!2sfr"
               width="100%"
-              height="400"
+              height="360"
               style="border:0;"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
+              title="Katzav Delicatessen — 192 Rue du Rouet, 13008 Marseille"
             ></iframe>
 
             <div class="access__contact">
@@ -1047,16 +426,17 @@
                 <a href="tel:+33622668353" aria-label="Appeler Katzav Delicatessen au 06 22 66 83 53">06 22 66 83 53</a>
               </p>
               <p class="access__contact-item">
-                <a href="mailto:katzavdeli@gmail.com" aria-label="Envoyer un email à Katzav Delicatessen">katzavdeli@gmail.com</a>
+                <a href="mailto:katzavdeli@gmail.com">katzavdeli@gmail.com</a>
               </p>
               <p class="access__contact-item">
                 <span>Kasher sous surveillance du Beth-Din de Marseille</span>
               </p>
-              <img src="assets/logo-beth-din.png.png" alt="Kasher Beth Din de Marseille" style="height:80px; width:80px; object-fit:contain; display:block; margin-top:8px;">
+              <img src="assets/logo-beth-din.png.png" alt="Kasher Beth Din de Marseille" style="height:80px; width:80px; object-fit:contain; display:block; margin-top:8px;" loading="lazy">
             </div>
           </div>
 
-        </div><!-- /.access__grid -->
+        </div>
+
       </div>
     </section>
 
@@ -1070,32 +450,24 @@
 
       <div class="footer__top">
 
-        <!-- Colonne marque -->
         <div class="footer__brand">
-          <a href="/" aria-label="Katzav Delicatessen — Accueil">
+          <a href="index.html" aria-label="Katzav Delicatessen — Accueil">
             <img src="assets/logo/katzav-logo.png" alt="Katzav Delicatessen" class="footer__logo" width="100" height="32">
           </a>
-          <p class="footer__tagline">
-            192 Rue du Rouet · 13008 Marseille.
-          </p>
-          <span class="footer__kasher">
-            Kasher — Beth-Din de Marseille
-          </span>
+          <p class="footer__tagline">192 Rue du Rouet · 13008 Marseille.</p>
+          <span class="footer__kasher">Kasher — Beth-Din de Marseille</span>
         </div>
 
-        <!-- Colonne navigation -->
         <nav aria-label="Navigation footer">
           <p class="footer__nav-title">Le site</p>
           <ul class="footer__nav-list" role="list">
-            <li><a href="#menu">La carte</a></li>
-            <li><a href="#compo">La Compo</a></li>
-            <li><a href="#galerie">Galerie</a></li>
-            <li><a href="#horaires">Horaires</a></li>
-            <li><a href="#acces">Nous trouver</a></li>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="galerie.html">Galerie</a></li>
+            <li><a href="infos.html">Horaires &amp; Accès</a></li>
           </ul>
         </nav>
 
-        <!-- Colonne contact -->
         <div class="footer__contact" role="complementary" aria-label="Informations de contact">
           <p class="footer__nav-title">Contact</p>
           <p class="footer__contact-item">
@@ -1120,41 +492,22 @@
           </p>
           <p class="footer__contact-item">
             <i class="fa-brands fa-tiktok footer__contact-icon" aria-hidden="true"></i>
-            <a href="https://www.tiktok.com/@katzav.deli" target="_blank" rel="noopener noreferrer">TikTok</a>
+            <a href="https://www.tiktok.com/@katzav.deli" target="_blank" rel="noopener noreferrer">@katzav.deli</a>
           </p>
         </div>
 
-      </div><!-- /.footer__top -->
+      </div>
 
       <div class="footer__bottom">
         <p class="footer__copy">
-          &copy; 2026 Katzav Delicatessen · Site réalisé par
-          AM Talents
+          &copy; 2026 Katzav Delicatessen · Site réalisé par AM Talents
         </p>
       </div>
 
     </div>
   </footer>
 
-  <!-- ── Scripts ──────────────────────────────────────────────── -->
   <script type="module" src="js/main.js"></script>
-
-  <!-- Script inline minimal pour les URLs de livraison (injectées par Flask via template ou configuration) -->
-  <script>
-    // Mise à jour des liens de livraison depuis la configuration serveur
-    // Ces valeurs sont remplacées au déploiement via les variables d'environnement
-    (function () {
-      var UBEREATS_URL  = window.UBEREATS_URL  || '#';
-      var DELIVEROO_URL = window.DELIVEROO_URL || '#';
-
-      var uberBtn     = document.getElementById('ubereats-link');
-      var deliverBtn  = document.getElementById('deliveroo-link');
-
-      if (uberBtn   && UBEREATS_URL  !== '#') uberBtn.href   = UBEREATS_URL;
-      if (deliverBtn && DELIVEROO_URL !== '#') deliverBtn.href = DELIVEROO_URL;
-    })();
-  </script>
 
 </body>
 </html>
-

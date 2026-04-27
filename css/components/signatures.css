@@ -1,0 +1,119 @@
+/* ═══════════════════════════════════════════════════════════════
+   SIGNATURES — Section "Nos Signatures" (index.html)
+   ═══════════════════════════════════════════════════════════════ */
+
+.signatures {
+  background-color: var(--off-white);
+  padding: var(--spacing-2xl) 0;
+}
+
+.signatures__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.signatures__header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.signatures__label {
+  display: block;
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--red);
+  margin-bottom: var(--spacing-xs);
+}
+
+.signatures__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  color: var(--black);
+  line-height: 0.95;
+}
+
+.signatures__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.signatures__card {
+  background-color: var(--white);
+  border-radius: 12px;
+  padding: var(--spacing-lg);
+  border-top: 4px solid var(--red);
+  box-shadow: 0 2px 16px rgba(232, 0, 28, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.signatures__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 32px rgba(232, 0, 28, 0.14);
+}
+
+.signatures__card-name {
+  font-family: var(--font-display);
+  font-size: 1.7rem;
+  color: var(--black);
+  margin-bottom: var(--spacing-xs);
+}
+
+.signatures__card-price {
+  display: inline-block;
+  font-family: var(--font-label);
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: var(--red);
+  margin-bottom: var(--spacing-sm);
+}
+
+.signatures__card-desc {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.signatures__cta {
+  text-align: center;
+}
+
+.signatures__cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-family: var(--font-label);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  padding: 0.85rem 2rem;
+  background-color: var(--red);
+  color: var(--white);
+  border-radius: 50px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.signatures__cta-btn:hover {
+  background-color: var(--red-dark);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .signatures__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .signatures__grid {
+    grid-template-columns: 1fr;
+  }
+}
