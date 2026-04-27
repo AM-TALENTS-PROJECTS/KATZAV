@@ -38,7 +38,7 @@
 .nav__logos {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   gap: 10px;
 }
 
