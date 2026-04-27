@@ -197,16 +197,17 @@
 /* ── Onglet spécial Tisha Beav ── */
 .menu__tab--special {
   background: #1B4FD8;
-  color: #ffffff;
+  color: #ffffff !important;
   border-color: #1B4FD8;
-  font-weight: 700;
+  font-weight: 900;
+  letter-spacing: 0.05em;
 }
 
 .menu__tab--special:hover,
 .menu__tab--special[aria-selected="true"] {
   background: #1640B0;
   border-color: #1640B0;
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 .tisha-header {
