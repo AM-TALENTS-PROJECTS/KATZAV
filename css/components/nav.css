@@ -50,11 +50,12 @@
 }
 
 .nav__bethdin-logo {
-  height: 36px;
+  height: 28px;
   width: auto;
   display: block;
   align-self: center;
   opacity: 0.9;
+  margin-top: 4px;
 }
 
 .nav__logo-placeholder {
