@@ -73,6 +73,32 @@ Fond noir dominant avec cassures rouge vif. Typographies massives et boldées.
 
 ---
 
+## Routing — URLs propres (depuis 2026-07-02)
+
+Les pages sont physiquement toujours des fichiers `.html` à la racine, mais sont servies
+sous des URLs sans extension via `.htaccess` (mod_rewrite Apache) :
+
+| Fichier réel | URL publique |
+|---|---|
+| `index.html` | `/` |
+| `menu.html` | `/la-carte` |
+| `galerie.html` | `/galerie` |
+| `infos.html` | `/horaires-acces` |
+| `mentions-legales.html` | `/mentions-legales` |
+| `politique-confidentialite.html` | `/politique-confidentialite` |
+
+Les anciennes URLs `*.html` sont redirigées en 301 vers les URLs propres (SEO préservé).
+Tous les liens internes (`href`) utilisent désormais ces chemins propres, toujours en
+relatif (`la-carte`, `galerie`, …) sauf l'accueil qui utilise `/`. Le fichier `.htaccess`
+normalise aussi l'absence de slash final sur ces routes, pour ne pas casser la résolution
+des chemins relatifs (`css/`, `js/`, `assets/`).
+
+**Si un nouveau fichier `.html` est ajouté**, il faut : ajouter sa règle de réécriture +
+sa redirection 301 dans `.htaccess`, mettre à jour `sitemap.xml`, et utiliser le slug
+propre (pas le nom de fichier) dans tous les `href` internes qui pointent vers lui.
+
+---
+
 ## Identité client — NE PAS MODIFIER sans validation
 
 | Info            | Valeur                              |
@@ -204,3 +230,9 @@ SITE_URL=https://katzav-delicatessen.com
 - Hamburger mobile JS natif + aria roles complets
 - `prefers-reduced-motion` respecté sur toutes les animations
 - Accessibilité : skip link, aria-labels, rôles tablist/tabpanel, navigation clavier onglets
+
+### Session 2026-07-02 (URLs propres sans .html)
+- Ajout de `.htaccess` (mod_rewrite Apache) : URLs sans extension pour les 6 pages + redirections 301 depuis les anciennes URLs `.html`, normalisation sans slash final
+- Tous les `href` internes des 6 pages migrés vers les nouvelles URLs propres (`/`, `la-carte`, `galerie`, `horaires-acces`, `mentions-legales`, `politique-confidentialite`)
+- `canonical`, `og:url`, `hasMenu` (JSON-LD) et `sitemap.xml` mis à jour avec les URLs propres
+- Nouvelle section « Routing » ajoutée à ce fichier documentant le mapping fichier ↔ URL

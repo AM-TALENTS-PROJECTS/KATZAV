@@ -1,0 +1,58 @@
+# ═══════════════════════════════════════════════════════════════
+# Katzav Delicatessen — URLs propres (sans extension .html)
+# ═══════════════════════════════════════════════════════════════
+
+RewriteEngine On
+
+# ── 1) Redirections 301 : anciennes URLs .html → nouvelles URLs propres ──
+# (préserve le référencement et les liens/QR codes déjà en circulation)
+
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ /? [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+menu\.html[\s?] [NC]
+RewriteRule ^menu\.html$ /la-carte? [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+galerie\.html[\s?] [NC]
+RewriteRule ^galerie\.html$ /galerie? [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+infos\.html[\s?] [NC]
+RewriteRule ^infos\.html$ /horaires-acces? [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+mentions-legales\.html[\s?] [NC]
+RewriteRule ^mentions-legales\.html$ /mentions-legales? [R=301,L]
+
+RewriteCond %{THE_REQUEST} \s/+politique-confidentialite\.html[\s?] [NC]
+RewriteRule ^politique-confidentialite\.html$ /politique-confidentialite? [R=301,L]
+
+# ── 1bis) Normalisation : jamais de slash final sur ces routes ──
+# (le site utilise des chemins relatifs pour css/js/assets ; un slash final
+# changerait la base de résolution relative et casserait ces chemins)
+RewriteRule ^(la-carte|galerie|horaires-acces|mentions-legales|politique-confidentialite)/$ /$1 [R=301,L]
+
+# ── 2) Réécriture interne : URL propre → fichier réel (l'URL affichée reste propre) ──
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^la-carte/?$ menu.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^galerie/?$ galerie.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^horaires-acces/?$ infos.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^mentions-legales/?$ mentions-legales.html [L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^politique-confidentialite/?$ politique-confidentialite.html [L]
+
+# La page d'accueil (/) sert index.html nativement via DirectoryIndex — pas de règle nécessaire.
+
+# ── 3) Page d'erreur 404 (optionnel — décommenter si une page 404.html est ajoutée) ──
+# ErrorDocument 404 /404.html
