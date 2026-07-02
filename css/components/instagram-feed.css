@@ -1,0 +1,67 @@
+/* ═══════════════════════════════════════════════════════════════
+   INSTAGRAM FEED — Widget Elfsight (index.html uniquement)
+   ═══════════════════════════════════════════════════════════════ */
+
+.instagram-feed {
+  background-color: var(--black);
+  padding: var(--spacing-2xl) 0;
+  border-top: 1px solid rgba(232, 0, 28, 0.15);
+}
+
+.instagram-feed__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.instagram-feed__header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.instagram-feed__label {
+  display: block;
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--red);
+  margin-bottom: var(--spacing-xs);
+}
+
+.instagram-feed__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  color: var(--white);
+  line-height: 0.95;
+}
+
+/* Conteneur du widget Elfsight — hauteur réservée pour limiter le CLS
+   pendant le chargement lazy du script */
+.instagram-feed__widget {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  min-height: 560px;
+}
+
+.instagram-feed__widget > div {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .instagram-feed__widget {
+    min-height: 480px;
+  }
+}
+
+@media (max-width: 560px) {
+  .instagram-feed {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .instagram-feed__widget {
+    min-height: 380px;
+  }
+}
