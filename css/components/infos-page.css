@@ -271,6 +271,25 @@
   transform: translateY(-2px);
 }
 
+/* ── Option téléphone (discrète, sous les CTA livraison) ──────── */
+.infos__order-phone {
+  margin-top: var(--spacing-lg);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.infos__order-phone a {
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.infos__order-phone a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
 /* ── Réseaux sociaux ─────────────────────────────────────────── */
 .infos__socials {
   background-color: var(--gray-dark);
