@@ -13,7 +13,7 @@ Développé par **AM Talents** (agence digitale marseillaise).
 
 **Client** : Kevin — fondateur de Katzav Delicatessen  
 **Agence** : AM Talents  
-**Domaine cible** : katzav-delicatessen.fr
+**Domaine cible** : katzav-delicatessen.com
 
 ---
 
@@ -157,7 +157,7 @@ Suppléments : Veau à l'os +2€, Mayo truffée +1€, Mayo spicy +1€
 
 - `<title>` exact : `Katzav Delicatessen — Sandwich Gourmet Kasher | Marseille 13008`
 - `<meta name="description">` : contient "kasher Marseille 8", "Uber Eats", "Deliveroo", "192 Rue du Rouet"
-- `<link rel="canonical">` vers `https://katzav-delicatessen.fr/`
+- `<link rel="canonical">` vers `https://katzav-delicatessen.com/`
 - Schema.org `@type: Restaurant` complet (adresse, horaires, géo, sameAs)
 - H1 = `T'AS FAIM ?`
 - H2 = `LA CARTE`, `LA COMPO DE TES RÊVES`, `MIAM`, `ON EST LÀ`
@@ -188,7 +188,7 @@ DELIVEROO_URL=https://deliveroo.fr/restaurant/katzav-delicatessen
 FLASK_ENV=production
 SECRET_KEY=change-me-in-production
 PORT=5000
-SITE_URL=https://katzav-delicatessen.fr
+SITE_URL=https://katzav-delicatessen.com
 ```
 
 ---

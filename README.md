@@ -95,7 +95,7 @@ katzav-delicatessen/
 | `FLASK_ENV`    | Environnement Flask                     | `production` ou `development`        |
 | `SECRET_KEY`   | Clé secrète Flask                       | Chaîne aléatoire longue              |
 | `PORT`         | Port d'écoute                           | `5000`                               |
-| `SITE_URL`     | URL canonical du site                   | `https://katzav-delicatessen.fr`     |
+| `SITE_URL`     | URL canonical du site                   | `https://katzav-delicatessen.com`     |
 
 ---
 
