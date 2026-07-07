@@ -227,84 +227,94 @@
   margin-bottom: var(--spacing-xl);
 }
 
-.infos__order-btns {
+/* ── Bloc commande : appel direct en priorité, livraison en secondaire ─── */
+/* Priorité business : le téléphone (0% commission) doit dominer visuellement
+   les 3 plateformes de livraison (qui prennent une commission). */
+.infos__order-eyebrow {
+  font-family: var(--font-label);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: var(--spacing-sm);
+}
+
+/* CTA principal : appel direct */
+.infos__phone-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  white-space: nowrap;
+  font-family: var(--font-label);
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  color: var(--red);
+  background-color: var(--white);
+  border-radius: 50px;
+  padding: 1.1rem 2.2rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+}
+
+.infos__phone-cta:visited {
+  color: var(--red);
+}
+
+.infos__phone-cta:hover {
+  background-color: var(--off-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+}
+
+.infos__phone-cta-icon {
+  font-size: 1.15rem;
+}
+
+/* Options secondaires : livraison via plateformes tierces */
+.infos__delivery-label {
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.infos__delivery-ctas {
   display: flex;
-  gap: var(--spacing-md);
+  gap: 0.5rem;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.infos__order-btn {
+.infos__delivery-btn {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacing-sm);
   font-family: var(--font-label);
-  font-size: 0.85rem;
-  font-weight: 800;
+  font-size: 0.7rem;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.05em;
   text-decoration: none;
-  padding: 0.9rem 1.8rem;
+  color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 50px;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  padding: 0.5rem 1.1rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
-.infos__order-btn--primary {
-  background-color: var(--white);
-  color: var(--red);
+.infos__delivery-btn:visited {
+  color: rgba(255, 255, 255, 0.75);
 }
 
-.infos__order-btn--primary:hover {
-  background-color: var(--off-white);
-  transform: translateY(-2px);
-}
-
-.infos__order-btn--secondary {
-  background-color: transparent;
-  color: var(--white);
-  border: 2px solid rgba(255, 255, 255, 0.45);
-}
-
-.infos__order-btn--secondary:hover {
-  border-color: var(--white);
+.infos__delivery-btn:hover {
+  border-color: rgba(255, 255, 255, 0.7);
   background-color: rgba(255, 255, 255, 0.08);
-  transform: translateY(-2px);
-}
-
-/* ── Option téléphone (discrète, sous les CTA livraison) ──────── */
-.infos__order-phone {
-  margin-top: var(--spacing-lg);
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.55);
-}
-
-/* Pilule discrète autour du numéro : poids visuel clairement sous les CTA livraison */
-.infos__order-phone a {
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-  font-family: var(--font-label);
-  font-weight: 800;
-  font-size: 0.85rem;
-  letter-spacing: 0.03em;
   color: var(--white);
-  text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 50px;
-  padding: 0.3rem 0.85rem;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
-}
-
-/* Reset état :visited — sans ça le navigateur applique sa couleur violet/noir par défaut
-   dès que le lien tel: a été visité une fois */
-.infos__order-phone a:visited {
-  color: var(--white);
-}
-
-.infos__order-phone a:hover {
-  border-color: var(--white);
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* ── Réseaux sociaux ─────────────────────────────────────────── */
@@ -379,14 +389,11 @@
     padding: var(--spacing-sm) var(--spacing-md);
   }
 
-  .infos__order-btns {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .infos__order-btn {
+  .infos__phone-cta {
+    font-size: 1.15rem;
+    padding: 0.9rem 1.6rem;
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
     justify-content: center;
   }
 

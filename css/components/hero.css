@@ -138,108 +138,101 @@
   font-size: 0.9rem;
 }
 
-/* ── Boutons CTA ─────────────────────────────────────────────── */
-.hero__ctas {
+/* ── Bloc commande : appel direct en priorité, livraison en secondaire ─── */
+/* Priorité business : le téléphone (0% commission) doit dominer visuellement
+   les 3 plateformes de livraison (qui prennent une commission). */
+.hero__order {
   display: flex;
-  gap: var(--spacing-sm);
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeSlideUp 0.6s ease forwards 0.75s;
 }
 
-.hero__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+.hero__order-eyebrow {
   font-family: var(--font-label);
-  font-size: 0.85rem;
-  font-weight: 900;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  text-decoration: none;
-  padding: 0.9rem 1.8rem;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  letter-spacing: 0.06em;
 }
 
-.hero__cta--primary {
-  background-color: var(--white);
-  color: var(--red);
-  border-radius: 50px;
-  font-weight: 800;
-}
-
-.hero__cta--primary:hover {
-  background-color: var(--off-white);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-}
-
-.hero__cta--secondary {
-  background-color: transparent;
-  color: var(--white);
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  border-radius: 50px;
-}
-
-.hero__cta--secondary:hover {
-  border-color: var(--white);
-  background-color: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
-}
-
-/* Reset état :visited pour uniformiser les 3 boutons */
-.hero__cta--primary:visited {
-  background-color: var(--white);
-  color: var(--red);
-}
-
-.hero__cta--secondary:visited {
-  background-color: transparent;
-  color: var(--white);
-  border-color: rgba(255, 255, 255, 0.6);
-}
-
-.hero__cta-icon {
-  font-size: 1rem;
-}
-
-/* ── Option téléphone (discrète, sous les CTA livraison) ──────── */
-.hero__phone-note {
-  font-family: var(--font-body);
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.75);
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeSlideUp 0.6s ease forwards 0.85s;
-}
-
-/* Pilule discrète autour du numéro : poids visuel clairement sous les CTA livraison */
-.hero__phone-note a {
+/* CTA principal : appel direct */
+.hero__phone-cta {
   display: inline-flex;
   align-items: center;
+  gap: 0.7rem;
   white-space: nowrap;
   font-family: var(--font-label);
-  font-weight: 800;
-  font-size: 0.85rem;
-  letter-spacing: 0.03em;
-  color: var(--white);
-  text-decoration: none;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  color: var(--red);
+  background-color: var(--white);
   border-radius: 50px;
-  padding: 0.3rem 0.85rem;
-  transition: border-color 0.2s ease, background-color 0.2s ease;
+  padding: 1.1rem 2.2rem;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
-/* Reset état :visited — sans ça le navigateur applique sa couleur violet/noir par défaut
-   dès que le lien tel: a été visité une fois, d'où l'incohérence de couleur observée */
-.hero__phone-note a:visited {
+.hero__phone-cta:visited {
+  color: var(--red);
+}
+
+.hero__phone-cta:hover {
+  background-color: var(--off-white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+}
+
+.hero__phone-cta-icon {
+  font-size: 1.15rem;
+}
+
+/* Options secondaires : livraison via plateformes tierces */
+.hero__delivery-label {
+  margin-top: 0.3rem;
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.hero__delivery-ctas {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.hero__delivery-btn {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-label);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 50px;
+  padding: 0.5rem 1.1rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.hero__delivery-btn:visited {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.hero__delivery-btn:hover {
+  border-color: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.08);
   color: var(--white);
-}
-
-.hero__phone-note a:hover {
-  border-color: var(--white);
-  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* ── Animation keyframes ─────────────────────────────────────── */
@@ -256,8 +249,7 @@
   .hero__headline,
   .hero__subheadline,
   .hero__kasher,
-  .hero__ctas,
-  .hero__phone-note {
+  .hero__order {
     opacity: 1;
     transform: none;
     animation: none;
@@ -271,19 +263,22 @@
     text-align: center;
   }
 
-  .hero__ctas {
-    justify-content: center;
-    flex-direction: column;
+  .hero__order {
     align-items: center;
     width: 100%;
   }
 
-  .hero__cta {
-    padding: 0.75rem 1.5rem;
-    font-size: 0.8rem;
+  .hero__phone-cta {
+    font-size: 1.15rem;
+    padding: 0.9rem 1.6rem;
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
     justify-content: center;
+  }
+
+  .hero__delivery-ctas {
+    justify-content: center;
+    width: 100%;
   }
 
   .hero__blob {
