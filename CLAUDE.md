@@ -145,7 +145,7 @@ propre (pas le nom de fichier) dans tous les `href` internes qui pointent vers l
 
 ### Starters
 - Houmous Bassar — 16€, Arayes ×3 — 15€, Assiette Merguez ×4 — 15€
-- Piment del Padron — 8€, Onion Rings ×6 — 8€, Chicken Nuggets ×5 — 8€
+- Piment del Padron — 8€, Onion Rings ×6 — 8€, Chicken Nuggets ×5 — 10€
 - Plateau de charcuterie — 25€
 
 ### Bagel & Hot-Dog
