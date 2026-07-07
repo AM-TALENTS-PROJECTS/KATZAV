@@ -202,6 +202,21 @@
   font-size: 1rem;
 }
 
+/* Groupe bouton téléphone + petite note à côté (ex: "— on vous livre aussi") */
+.hero__cta-group {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.hero__cta-note {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+}
+
 /* ── Bloc commande menu.html : appel direct en priorité, livraison en secondaire ─── */
 /* Priorité business : le téléphone (0% commission) doit dominer visuellement
    les 3 plateformes de livraison (qui prennent une commission). */
@@ -331,6 +346,11 @@
   .hero__ctas {
     flex-direction: column;
     align-items: center;
+    width: 100%;
+  }
+
+  .hero__cta-group {
+    flex-direction: column;
     width: 100%;
   }
 
