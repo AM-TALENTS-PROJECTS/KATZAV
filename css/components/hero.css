@@ -202,19 +202,20 @@
   font-size: 1rem;
 }
 
-/* Groupe bouton téléphone + petite note à côté (ex: "— on vous livre aussi") */
-.hero__cta-group {
+/* Numéro + sous-texte ("On livre aussi !") empilés dans le bouton téléphone */
+.hero__cta-text {
   display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  line-height: 1.2;
+  text-align: left;
 }
 
-.hero__cta-note {
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.75);
+.hero__cta-subtext {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--red);
+  opacity: 0.7;
 }
 
 /* ── Bloc commande menu.html : appel direct en priorité, livraison en secondaire ─── */
@@ -349,15 +350,14 @@
     width: 100%;
   }
 
-  .hero__cta-group {
-    flex-direction: column;
-    width: 100%;
-  }
-
   .hero__cta {
     width: 100%;
     max-width: 340px;
     justify-content: center;
+  }
+
+  .hero__cta-text {
+    text-align: center;
   }
 
   .hero__order {
