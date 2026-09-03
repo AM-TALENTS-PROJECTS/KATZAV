@@ -15,7 +15,58 @@
 
 /* ── En-tête de section ─────────────────────────────────────── */
 .menu__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
   margin-bottom: var(--spacing-xl);
+}
+
+.menu__header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ── Badge "Menu Frites + Boisson" ──────────────────────────── */
+.menu__header-badge {
+  flex-shrink: 0;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background-color: var(--red);
+  box-shadow: 0 10px 24px rgba(232, 0, 28, 0.35), 0 3px 8px rgba(0, 0, 0, 0.18);
+  transform: rotate(-10deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  font-family: var(--font-label);
+  line-height: 1.05;
+}
+
+.menu__header-badge-line {
+  display: block;
+  font-weight: 700;
+}
+
+.menu__header-badge-line--sm {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  opacity: 0.9;
+}
+
+.menu__header-badge-line--md {
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+}
+
+.menu__header-badge-line--price {
+  font-family: var(--font-display);
+  font-size: 1.9rem;
+  line-height: 1;
+  margin-top: 0.2rem;
 }
 
 .menu__section-label {
@@ -235,7 +286,32 @@
   }
 
   .menu__header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     margin-bottom: var(--spacing-md);
+  }
+
+  .menu__header-text {
+    text-align: center;
+  }
+
+  .menu__header-badge {
+    width: 96px;
+    height: 96px;
+    margin-top: var(--spacing-sm);
+  }
+
+  .menu__header-badge-line--sm {
+    font-size: 0.55rem;
+  }
+
+  .menu__header-badge-line--md {
+    font-size: 0.65rem;
+  }
+
+  .menu__header-badge-line--price {
+    font-size: 1.4rem;
   }
 }
 

@@ -199,8 +199,16 @@
       <div class="menu__container">
 
         <div class="menu__header reveal">
-          <span class="menu__section-label">Katzav Delicatessen</span>
-          <h2 class="menu__title" id="menu-title">LA CARTE</h2>
+          <div class="menu__header-text">
+            <span class="menu__section-label">Katzav Delicatessen</span>
+            <h2 class="menu__title" id="menu-title">LA CARTE</h2>
+          </div>
+          <div class="menu__header-badge" role="note" aria-label="Menu Frites plus Boisson : supplément 4 euros">
+            <span class="menu__header-badge-line menu__header-badge-line--sm">MENU</span>
+            <span class="menu__header-badge-line menu__header-badge-line--md">FRITES +</span>
+            <span class="menu__header-badge-line menu__header-badge-line--md">BOISSON</span>
+            <span class="menu__header-badge-line menu__header-badge-line--price">+4€</span>
+          </div>
         </div>
 
         <!-- Bouton Tisha Beav -->
@@ -214,14 +222,15 @@
         <div class="menu__tabs-wrapper" role="tablist" aria-label="Catégories de la carte">
           <div class="menu__tabs">
             <button class="menu__tab" role="tab" aria-controls="panel-signatures"  id="tab-signatures"  aria-selected="false">Signatures</button>
-            <button class="menu__tab" role="tab" aria-controls="panel-classiques"  id="tab-classiques"  aria-selected="false">Classiques</button>
             <button class="menu__tab" role="tab" aria-controls="panel-specialites" id="tab-specialites" aria-selected="false">Spécialités</button>
             <button class="menu__tab" role="tab" aria-controls="panel-burgers"     id="tab-burgers"     aria-selected="false">Burgers</button>
-            <button class="menu__tab" role="tab" aria-controls="panel-baguette"    id="tab-baguette"    aria-selected="false">Baguette Charcuterie</button>
+            <button class="menu__tab" role="tab" aria-controls="panel-baguette"    id="tab-baguette"    aria-selected="false">Baguettes, Halla &amp; Viennois</button>
+            <button class="menu__tab" role="tab" aria-controls="panel-klub"        id="tab-klub"        aria-selected="false">Klub</button>
+            <button class="menu__tab" role="tab" aria-controls="panel-bagel"       id="tab-bagel"       aria-selected="false">Bun and Co.</button>
             <button class="menu__tab" role="tab" aria-controls="panel-starters"    id="tab-starters"    aria-selected="false">Starters</button>
-            <button class="menu__tab" role="tab" aria-controls="panel-bagel"       id="tab-bagel"       aria-selected="false">Bagel &amp; Hot-Dog</button>
-            <button class="menu__tab" role="tab" aria-controls="panel-plats"       id="tab-plats"       aria-selected="false">Plats</button>
-            <button class="menu__tab" role="tab" aria-controls="panel-salade"      id="tab-salade"      aria-selected="false">Salade</button>
+            <button class="menu__tab" role="tab" aria-controls="panel-plats"       id="tab-plats"       aria-selected="false">À l'Assiette</button>
+            <button class="menu__tab" role="tab" aria-controls="panel-salade"      id="tab-salade"      aria-selected="false">Salades</button>
+            <button class="menu__tab" role="tab" aria-controls="panel-boissons"    id="tab-boissons"    aria-selected="false">Boissons</button>
             <button class="menu__tab" role="tab" aria-controls="panel-desserts"    id="tab-desserts"    aria-selected="false">Desserts</button>
             <button class="menu__tab" role="tab" aria-controls="panel-kid"         id="tab-kid"         aria-selected="false">Menu Kid</button>
           </div>
@@ -233,57 +242,30 @@
             <article class="menu__item reveal">
               <div class="menu__item-top">
                 <h3 class="menu__item-name">Le K</h3>
-                <span class="menu__item-price">13€</span>
+                <span class="menu__item-price">14€</span>
               </div>
-              <p class="menu__item-desc">Pain classique, dinde fumée, pastrami de bœuf, salade, coleslaw, mayo maison</p>
+              <p class="menu__item-desc">Pain classique, dinde fumée, pastrami de bœuf, salade, coleslaw, mayonnaise maison</p>
             </article>
             <article class="menu__item reveal reveal--delay-1">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Le ATZ</h3>
-                <span class="menu__item-price">14€</span>
+                <h3 class="menu__item-name">Le Atz</h3>
+                <span class="menu__item-price">15€</span>
               </div>
-              <p class="menu__item-desc">Pain sésame, dinde fumée, pickles de bœuf, salade, confit d'oignons, oignons crispy, mayo maison, sauce moutarde miel</p>
+              <p class="menu__item-desc">Pain sésame, dinde fumée, pickles de bœuf, salade, confit d'oignons, oignons crispy, mayonnaise maison, sauce moutarde miel</p>
             </article>
             <article class="menu__item reveal reveal--delay-2">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Le AV</h3>
-                <span class="menu__item-price">15€</span>
+                <h3 class="menu__item-name">Le Av</h3>
+                <span class="menu__item-price">16€</span>
               </div>
-              <p class="menu__item-desc">Pain pavot, dinde fumée, pickles de bœuf New Yorkais, rosette, choux rouge, cornichons, confit d'oignons, mayo maison, sauce moutarde miel</p>
+              <p class="menu__item-desc">Pain sésame, dinde fumée, pickles de bœuf NY, rosette, choux rouge, cornichons, confit d'oignons, mayonnaise maison, sauce moutarde miel</p>
             </article>
             <article class="menu__item reveal reveal--delay-3">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Le KATZAV</h3>
-                <span class="menu__item-price">16€</span>
+                <h3 class="menu__item-name">Le Katzav</h3>
+                <span class="menu__item-price">17€</span>
               </div>
-              <p class="menu__item-desc">Pain olives noires, dinde fumée, mandoline de veau, pickles de bœuf NY, rosette, salade, guacamole, confit d'oignons, mayo truffée maison</p>
-            </article>
-          </div>
-        </div>
-
-        <!-- Sandwichs Classiques -->
-        <div class="menu__panel" id="panel-classiques" role="tabpanel" aria-labelledby="tab-classiques" hidden>
-          <div class="menu__grid">
-            <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">L'Americano</h3>
-                <span class="menu__item-price">13€</span>
-              </div>
-              <p class="menu__item-desc">Steak, frite, sauce au choix</p>
-            </article>
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Chicken</h3>
-                <span class="menu__item-price">14€</span>
-              </div>
-              <p class="menu__item-desc">Poulet pané, frite, sauce au choix</p>
-            </article>
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Merguez</h3>
-                <span class="menu__item-price">15€</span>
-              </div>
-              <p class="menu__item-desc">Merguez, frite, sauce au choix</p>
+              <p class="menu__item-desc">Pain olives noires, dinde fumée, mandoline de veau, pickles de bœuf NY, rosette, roquette, guacamole, confit d'oignons, mayonnaise truffée maison</p>
             </article>
           </div>
         </div>
@@ -293,31 +275,38 @@
           <div class="menu__grid">
             <article class="menu__item reveal">
               <div class="menu__item-top">
+                <h3 class="menu__item-name">Le Halla Pastrami</h3>
+                <span class="menu__item-price">16€</span>
+              </div>
+              <p class="menu__item-desc">Roquette, confit d'oignons, oignons crispy, pastrami grillé, moutarde miel</p>
+            </article>
+            <article class="menu__item reveal reveal--delay-1">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Le Halla Schnitzel</h3>
+                <span class="menu__item-price">16€</span>
+              </div>
+              <p class="menu__item-desc">Halla, mechouia, roquette, aubergines grillées, pickles d'oignon rouge, schnitzel, tehina</p>
+            </article>
+            <article class="menu__item reveal reveal--delay-2">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Katz Chicken</h3>
+                <span class="menu__item-price">17€</span>
+              </div>
+              <p class="menu__item-desc">Coleslaw, shwarma de poulet, confit d'oignons, oignons crispy, sauce Katzav</p>
+            </article>
+            <article class="menu__item reveal reveal--delay-3">
+              <div class="menu__item-top">
                 <h3 class="menu__item-name">Atzado</h3>
                 <span class="menu__item-price">18€</span>
               </div>
               <p class="menu__item-desc">Roquette, effiloché de bœuf, cornichons, sauce Katzav</p>
             </article>
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Katz Chicken</h3>
-                <span class="menu__item-price">17€</span>
-              </div>
-              <p class="menu__item-desc">Coleslaw, schwarma, confit d'oignons, oignons crispy, sauce Katzav</p>
-            </article>
-            <article class="menu__item reveal reveal--delay-2">
+            <article class="menu__item reveal">
               <div class="menu__item-top">
                 <h3 class="menu__item-name">Pita Crispy</h3>
                 <span class="menu__item-price">18€</span>
               </div>
-              <p class="menu__item-desc">Pita panée, houmous, choux, coleslaw, schwarma, falafel</p>
-            </article>
-            <article class="menu__item reveal reveal--delay-3">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Le Halla Pastrami</h3>
-                <span class="menu__item-price">16€</span>
-              </div>
-              <p class="menu__item-desc">Roquette, confit d'oignons, oignons crispy, pastrami grillé, moutarde miel</p>
+              <p class="menu__item-desc">Pita panée, houmous, choux, coleslaw, shwarma, falafel</p>
             </article>
           </div>
         </div>
@@ -331,55 +320,147 @@
                 <h3 class="menu__item-name">Classic Burger</h3>
                 <span class="menu__item-price">15€</span>
               </div>
-              <p class="menu__item-desc">Salade, tomate, oignons rouges, steak, sauce Katzav</p>
+              <p class="menu__item-desc">Salade, tomates, oignons rouges, steak, sauce Katzav</p>
             </article>
             <article class="menu__item reveal reveal--delay-1">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Classic Chicken</h3>
+                <span class="menu__item-price">15€</span>
+              </div>
+              <p class="menu__item-desc">Salade, tomates, oignons rouges, poulet pané, sauce moutarde miel</p>
+            </article>
+            <article class="menu__item reveal reveal--delay-2">
               <div class="menu__item-top">
                 <h3 class="menu__item-name">Big Burger</h3>
                 <span class="menu__item-price">18€</span>
               </div>
-              <p class="menu__item-desc">Salade, tomates, confit d'oignons, steak, œuf, dinde grillée, sauce Katzav</p>
-            </article>
-            <article class="menu__item reveal reveal--delay-2">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Classic Chicken</h3>
-                <span class="menu__item-price">14€</span>
-              </div>
-              <p class="menu__item-desc">Salade, tomates, oignons rouges, poulet pané, sauce moutarde miel</p>
+              <p class="menu__item-desc">Salade, tomates, oignons rouges, steak, sauce Katzav, œuf, dinde/pastrami grillé</p>
             </article>
             <article class="menu__item reveal reveal--delay-3">
               <div class="menu__item-top">
                 <h3 class="menu__item-name">Big Chicken</h3>
-                <span class="menu__item-price">17€</span>
+                <span class="menu__item-price">18€</span>
               </div>
-              <p class="menu__item-desc">Salade, tomates, confit d'oignons, œuf, pastrami grillé, sauce moutarde miel</p>
+              <p class="menu__item-desc">Salade, tomates, oignons rouges, poulet pané, sauce moutarde miel, œuf, dinde/pastrami grillé</p>
+            </article>
+            <article class="menu__item reveal">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Burger Assado</h3>
+                <span class="menu__item-price">18€</span>
+              </div>
+              <p class="menu__item-desc">Roquette, confit d'oignons, tomates, pickles d'oignon rouge, assado effiloché, sauce Katzav</p>
+            </article>
+            <article class="menu__item reveal reveal--delay-1">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Double Burger</h3>
+                <span class="menu__item-price">18€</span>
+              </div>
+              <p class="menu__item-desc">Salade, tomates, oignons, sauce Katzav, steak 150g x2</p>
             </article>
           </div>
         </div>
 
-        <!-- Baguette Charcuterie -->
+        <!-- Baguettes, Halla & Viennois -->
         <div class="menu__panel" id="panel-baguette" role="tabpanel" aria-labelledby="tab-baguette" hidden>
+          <p class="menu__note">Accompagnées de frites fraîches maison.</p>
           <div class="menu__grid">
             <article class="menu__item reveal">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Le Full Rosette</h3>
-                <span class="menu__item-price">16€</span>
+                <h3 class="menu__item-name">L'Americano</h3>
+                <span class="menu__item-price">13€</span>
               </div>
-              <p class="menu__item-desc">Roquette, rosette, cornichon, sauce moutarde miel</p>
+              <p class="menu__item-desc">Steak, frites fraîches maison, sauce au choix</p>
             </article>
             <article class="menu__item reveal reveal--delay-1">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Le Full Mandoline</h3>
-                <span class="menu__item-price">17€</span>
+                <h3 class="menu__item-name">Le Dinde</h3>
+                <span class="menu__item-price">13€</span>
               </div>
-              <p class="menu__item-desc">Roquette, veau à l'os, cornichon, sauce tartare</p>
+              <p class="menu__item-desc">Dinde, frites fraîches maison, sauce au choix</p>
             </article>
             <article class="menu__item reveal reveal--delay-2">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Le Full Mix</h3>
-                <span class="menu__item-price">18€</span>
+                <h3 class="menu__item-name">Le Chicken</h3>
+                <span class="menu__item-price">14€</span>
               </div>
-              <p class="menu__item-desc">Roquette, rosette, veau à l'os, cornichon, sauce tartare</p>
+              <p class="menu__item-desc">Poulet pané, frites fraîches maison, sauce au choix</p>
+            </article>
+            <article class="menu__item reveal reveal--delay-3">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Le Poulet Grillé</h3>
+                <span class="menu__item-price">14€</span>
+              </div>
+              <p class="menu__item-desc">Poulet grillé, frites fraîches maison, sauce au choix</p>
+            </article>
+            <article class="menu__item reveal">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Le Merguez</h3>
+                <span class="menu__item-price">15€</span>
+              </div>
+              <p class="menu__item-desc">Merguez, frites fraîches maison, sauce au choix</p>
+            </article>
+            <article class="menu__item reveal reveal--delay-1">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Le Full Rosette</h3>
+                <span class="menu__item-price">15€</span>
+              </div>
+              <p class="menu__item-desc">Roquette, rosette, cornichons, sauce tartare</p>
+            </article>
+            <article class="menu__item reveal reveal--delay-2">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Le Full Mandoline</h3>
+                <span class="menu__item-price">16€</span>
+              </div>
+              <p class="menu__item-desc">Roquette, veau à l'os, cornichons, sauce tartare</p>
+            </article>
+            <article class="menu__item reveal reveal--delay-3">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Le Full Mix</h3>
+                <span class="menu__item-price">17€</span>
+              </div>
+              <p class="menu__item-desc">Roquette, rosette, veau à l'os, cornichons, sauce tartare</p>
+            </article>
+          </div>
+        </div>
+
+        <!-- Klub -->
+        <div class="menu__panel" id="panel-klub" role="tabpanel" aria-labelledby="tab-klub" hidden>
+          <p class="menu__note">Accompagnés de frites fraîches maison.</p>
+          <div class="menu__grid">
+            <article class="menu__item reveal">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Klub Thon</h3>
+                <span class="menu__item-price">14€</span>
+              </div>
+              <p class="menu__item-desc">Salade, tomate, thon, brouillade d'œuf, mayonnaise</p>
+            </article>
+            <article class="menu__item reveal reveal--delay-1">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Klub Saumon</h3>
+                <span class="menu__item-price">15€</span>
+              </div>
+              <p class="menu__item-desc">Salade, tomate, thon, brouillade d'œuf, mayonnaise</p>
+            </article>
+            <article class="menu__item reveal reveal--delay-2">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Klub Katzav</h3>
+                <span class="menu__item-price">16€</span>
+              </div>
+              <p class="menu__item-desc">Salade, tomate, confit d'oignon, oignons crispy, cornichons, pastrami, dinde, mayonnaise et moutarde miel</p>
+            </article>
+            <article class="menu__item reveal reveal--delay-3">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Le Katzu</h3>
+                <span class="menu__item-price">17€</span>
+              </div>
+              <p class="menu__item-desc">Assado, roquette, mechouia pickles d'oignons rouges</p>
+            </article>
+            <article class="menu__item reveal">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Le Katz Deli</h3>
+                <span class="menu__item-price">17€</span>
+              </div>
+              <p class="menu__item-desc">Pastrami grillé, oignons confits, cornichons, moutarde miel</p>
             </article>
           </div>
         </div>
@@ -389,142 +470,177 @@
           <div class="menu__grid">
             <article class="menu__item reveal">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Houmous Bassar</h3>
-                <span class="menu__item-price">16€</span>
+                <h3 class="menu__item-name">Frites fraîches</h3>
+                <span class="menu__item-price">4€</span>
               </div>
             </article>
             <article class="menu__item reveal reveal--delay-1">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Arayes ×3</h3>
-                <span class="menu__item-price">15€</span>
+                <h3 class="menu__item-name">Petit pot de choux ou coleslaw</h3>
+                <span class="menu__item-price">4€</span>
               </div>
             </article>
             <article class="menu__item reveal reveal--delay-2">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Assiette Merguez ×4</h3>
-                <span class="menu__item-price">15€</span>
+                <h3 class="menu__item-name">Onion Rings x7</h3>
+                <span class="menu__item-price">8€</span>
               </div>
             </article>
             <article class="menu__item reveal reveal--delay-3">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Piment del Padron</h3>
-                <span class="menu__item-price">8€</span>
+                <h3 class="menu__item-name">Tenders de poulet x5</h3>
+                <span class="menu__item-price">10€</span>
               </div>
+              <p class="menu__item-desc">Aiguillettes de poulet dans une panure croustillante</p>
             </article>
             <article class="menu__item reveal">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Onion Rings ×6</h3>
-                <span class="menu__item-price">8€</span>
+                <h3 class="menu__item-name">Arayes ×4</h3>
+                <span class="menu__item-price">15€</span>
               </div>
+              <p class="menu__item-desc">Pain pita farcie de viande hachée épicée</p>
             </article>
             <article class="menu__item reveal reveal--delay-1">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Chicken Nuggets ×5</h3>
-                <span class="menu__item-price">10€</span>
+                <h3 class="menu__item-name">Houmous Falafel</h3>
+                <span class="menu__item-price">15€</span>
               </div>
+              <p class="menu__item-desc">Houmous maison, falafels croustillants, servis avec une pita</p>
             </article>
             <article class="menu__item reveal reveal--delay-2">
               <div class="menu__item-top">
+                <h3 class="menu__item-name">Houmous Shawarma</h3>
+                <span class="menu__item-price">15€</span>
+              </div>
+              <p class="menu__item-desc">Houmous maison, shawarma de poulet servis avec une pita</p>
+            </article>
+            <article class="menu__item reveal reveal--delay-3">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Houmous Bassar</h3>
+                <span class="menu__item-price">16€</span>
+              </div>
+              <p class="menu__item-desc">Houmous maison, viande hachée au zaatar servis avec une pita</p>
+            </article>
+            <article class="menu__item reveal">
+              <div class="menu__item-top">
                 <h3 class="menu__item-name">Plateau de charcuterie</h3>
-                <span class="menu__item-price">25€</span>
+                <span class="menu__item-price">22€</span>
               </div>
             </article>
           </div>
         </div>
 
-        <!-- Bagel & Hot-Dog -->
+        <!-- Bun and Co. -->
         <div class="menu__panel" id="panel-bagel" role="tabpanel" aria-labelledby="tab-bagel" hidden>
           <div class="menu__grid">
             <article class="menu__item reveal">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Bagel Dinde</h3>
-                <span class="menu__item-price">12€</span>
-              </div>
-              <p class="menu__item-desc">Salade, cornichons, dinde, sauce Katzav</p>
-            </article>
-            <article class="menu__item reveal reveal--delay-1">
-              <div class="menu__item-top">
-                <h3 class="menu__item-name">Bagel Saumon</h3>
-                <span class="menu__item-price">12€</span>
-              </div>
-              <p class="menu__item-desc">Roquette, guacamole, concombres, tartare</p>
-            </article>
-            <article class="menu__item reveal reveal--delay-2">
               <div class="menu__item-top">
                 <h3 class="menu__item-name">Hot-Dog</h3>
                 <span class="menu__item-price">10€</span>
               </div>
             </article>
+            <article class="menu__item reveal reveal--delay-1">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Bun Dinde</h3>
+                <span class="menu__item-price">12€</span>
+              </div>
+              <p class="menu__item-desc">Salade, cornichons, dinde, sauce Katzav</p>
+            </article>
+            <article class="menu__item reveal reveal--delay-2">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Bun Saumon</h3>
+                <span class="menu__item-price">12€</span>
+              </div>
+              <p class="menu__item-desc">Roquette, guacamole, concombres, tartare</p>
+            </article>
+            <article class="menu__item reveal reveal--delay-3">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Bun Thon</h3>
+                <span class="menu__item-price">12€</span>
+              </div>
+              <p class="menu__item-desc">Mousse de thon, avocat, oignons crispy, mayonnaise</p>
+            </article>
           </div>
         </div>
 
-        <!-- Plats -->
+        <!-- À l'Assiette -->
         <div class="menu__panel" id="panel-plats" role="tabpanel" aria-labelledby="tab-plats" hidden>
-          <p class="menu__note">Tous les plats sont servis avec frites fraîches maison et salade.</p>
+          <p class="menu__note">Servi avec salade, choux, coleslaw, houmous, frites fraîches.</p>
           <div class="menu__grid">
             <article class="menu__item reveal">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Entrecôte</h3>
-                <span class="menu__item-price">30€</span>
+                <h3 class="menu__item-name">Steak à cheval</h3>
+                <span class="menu__item-price">20€</span>
               </div>
             </article>
             <article class="menu__item reveal reveal--delay-1">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Schnitzel</h3>
+                <span class="menu__item-price">20€</span>
+              </div>
+            </article>
+            <article class="menu__item reveal reveal--delay-2">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Poulet grillé</h3>
+                <span class="menu__item-price">20€</span>
+              </div>
+            </article>
+            <article class="menu__item reveal reveal--delay-3">
               <div class="menu__item-top">
                 <h3 class="menu__item-name">Assado</h3>
                 <span class="menu__item-price">22€</span>
               </div>
             </article>
-            <article class="menu__item reveal reveal--delay-2">
+            <article class="menu__item reveal">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Schwarma</h3>
-                <span class="menu__item-price">18€</span>
+                <h3 class="menu__item-name">Shawarma de poulet</h3>
+                <span class="menu__item-price">22€</span>
               </div>
             </article>
-            <article class="menu__item reveal reveal--delay-3">
+            <article class="menu__item reveal reveal--delay-1">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Steak à cheval</h3>
-                <span class="menu__item-price">15€</span>
+                <h3 class="menu__item-name">Merguez</h3>
+                <span class="menu__item-price">22€</span>
               </div>
             </article>
           </div>
         </div>
 
-        <!-- Salade -->
+        <!-- Salades -->
         <div class="menu__panel" id="panel-salade" role="tabpanel" aria-labelledby="tab-salade" hidden>
           <div class="menu__grid">
             <article class="menu__item menu__item--full reveal">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Salade maison</h3>
+                <h3 class="menu__item-name">Salade</h3>
                 <span class="menu__item-price">16€</span>
               </div>
               <p class="menu__item-desc">
-                Base : salade, tomate cerise, oignons rouges, maïs, avocat<br>
-                <strong>Protéines au choix :</strong> poulet pané · saumon fumé · dinde
+                Base : salade, tomate cerise, maïs, avocat, pickles d'oignon rouge, concombres, vinaigrette et balsamique<br>
+                <strong>Choix :</strong> poulet pané · poulet grillé · saumon fumé · charcuterie (dinde ou pastrami)
               </p>
             </article>
           </div>
         </div>
 
-        <!-- Desserts & Boissons -->
-        <div class="menu__panel" id="panel-desserts" role="tabpanel" aria-labelledby="tab-desserts" hidden>
+        <!-- Boissons -->
+        <div class="menu__panel" id="panel-boissons" role="tabpanel" aria-labelledby="tab-boissons" hidden>
           <div class="menu__grid">
             <article class="menu__item reveal">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Bagel Choco Speculoos</h3>
-                <span class="menu__item-price">8€</span>
+                <h3 class="menu__item-name">Eau</h3>
+                <span class="menu__item-price">2,5€</span>
               </div>
-              <p class="menu__item-desc">Bagel garni de pâte à tartiner et brisure de speculoos</p>
             </article>
             <article class="menu__item reveal reveal--delay-1">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Soda</h3>
-                <span class="menu__item-price">3€</span>
+                <h3 class="menu__item-name">Eau gazeuse</h3>
+                <span class="menu__item-price">2,5€</span>
               </div>
             </article>
             <article class="menu__item reveal reveal--delay-2">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Eau / Eau gazeuse</h3>
-                <span class="menu__item-price">2,5€</span>
+                <h3 class="menu__item-name">Soda</h3>
+                <span class="menu__item-price">3€</span>
               </div>
             </article>
             <article class="menu__item reveal reveal--delay-3">
@@ -535,14 +651,38 @@
             </article>
             <article class="menu__item reveal">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Café</h3>
-                <span class="menu__item-price">2€</span>
+                <h3 class="menu__item-name">Verre de vin</h3>
+                <span class="menu__item-price">5€</span>
               </div>
             </article>
             <article class="menu__item reveal reveal--delay-1">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Vin</h3>
-                <span class="menu__item-price">À la demande</span>
+                <h3 class="menu__item-name">Café</h3>
+                <span class="menu__item-price">2€</span>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- Desserts -->
+        <div class="menu__panel" id="panel-desserts" role="tabpanel" aria-labelledby="tab-desserts" hidden>
+          <div class="menu__grid">
+            <article class="menu__item reveal">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Bagel Choco Speculoos</h3>
+                <span class="menu__item-price">7€</span>
+              </div>
+            </article>
+            <article class="menu__item reveal reveal--delay-1">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Klub Choco Pralin</h3>
+                <span class="menu__item-price">7€</span>
+              </div>
+            </article>
+            <article class="menu__item reveal reveal--delay-2">
+              <div class="menu__item-top">
+                <h3 class="menu__item-name">Brownie</h3>
+                <span class="menu__item-price">7€</span>
               </div>
             </article>
           </div>
@@ -553,11 +693,11 @@
           <div class="menu__grid">
             <article class="menu__item menu__item--wide reveal">
               <div class="menu__item-top">
-                <h3 class="menu__item-name">Menu Kid</h3>
-                <span class="menu__item-price">12€</span>
+                <h3 class="menu__item-name">Menu Kid <span class="menu__category-note">(jusqu'à 12 ans)</span></h3>
+                <span class="menu__item-price">13€</span>
               </div>
               <p class="menu__item-desc">
-                Au choix : Nuggets + frite <em>ou</em> Burger + frite<br>
+                Au choix : Nuggets + Frites <em>ou</em> Burger + Frites <em>ou</em> Hot-Dog + Frites<br>
                 + Boisson Capri Sun<br>
                 + Dessert du moment
               </p>
@@ -711,7 +851,7 @@
 
           <div class="compo__price-display" aria-live="polite" aria-label="Prix total de votre compo">
             <span class="compo__price-label">Prix indicatif</span>
-            <span class="compo__price-total" id="compo-price">14€</span>
+            <span class="compo__price-total" id="compo-price">15€</span>
           </div>
         </div>
 

@@ -4,7 +4,7 @@
  */
 
 // Configuration des étapes
-const PRIX_BASE = 14;
+const PRIX_BASE = 15;
 
 const STEPS = [
   {
@@ -14,8 +14,10 @@ const STEPS = [
     options: [
       { value: 'classique', label: 'Classique', extra: 0 },
       { value: 'sesame',    label: 'Sésame',    extra: 0 },
-      { value: 'pavot',     label: 'Pavot',      extra: 0 },
       { value: 'olives',    label: 'Olives noires', extra: 0 },
+      { value: 'klub',      label: 'Klub',       extra: 0 },
+      { value: 'baguette',  label: 'Baguette',   extra: 0 },
+      { value: 'halla',     label: 'Halla',      extra: 0 },
     ],
   },
   {
@@ -25,13 +27,14 @@ const STEPS = [
     options: [
       { value: 'salade',           label: 'Salade',              extra: 0 },
       { value: 'roquette',         label: 'Roquette',            extra: 0 },
-      { value: 'choux',            label: 'Choux',               extra: 0 },
+      { value: 'choux',            label: 'Choux rouge pickles', extra: 0 },
       { value: 'coleslaw',         label: 'Coleslaw',            extra: 0 },
       { value: 'cornichons',       label: 'Cornichons',          extra: 0 },
       { value: 'guacamole',        label: 'Guacamole',           extra: 0 },
       { value: 'oignons-crispy',   label: 'Oignons crispy',      extra: 0 },
       { value: 'confit-oignons',   label: 'Confit d\'oignons',   extra: 0 },
       { value: 'pickles-oignons',  label: 'Pickles d\'oignons rouges', extra: 0 },
+      { value: 'avocat',           label: 'Avocat',               extra: 1.5 },
     ],
   },
   {
@@ -44,6 +47,7 @@ const STEPS = [
       { value: 'pickel-ny',  label: 'Pickel de bœuf NY',   extra: 0 },
       { value: 'rosette',    label: 'Rosette',              extra: 0 },
       { value: 'veau-os',    label: 'Veau à l\'os',         extra: 2 },
+      { value: 'saucisse',   label: 'Saucisse',             extra: 2 },
     ],
   },
   {
@@ -55,11 +59,12 @@ const STEPS = [
       { value: 'ketchup',       label: 'Ketchup',        extra: 0 },
       { value: 'harissa',       label: 'Harissa',        extra: 0 },
       { value: 'moutarde',      label: 'Moutarde',       extra: 0 },
+      { value: 'bbq',           label: 'BBQ',            extra: 0 },
       { value: 'moutarde-miel', label: 'Moutarde miel',  extra: 0 },
       { value: 'tartare',       label: 'Tartare',        extra: 0 },
       { value: 'katzav',        label: 'Sauce Katzav',   extra: 0 },
+      { value: 'mayo-spicy',    label: 'Mayo spicy',     extra: 0 },
       { value: 'mayo-truffee',  label: 'Mayo truffée',   extra: 1 },
-      { value: 'mayo-spicy',    label: 'Mayo spicy',     extra: 1 },
     ],
   },
 ];

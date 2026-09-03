@@ -122,48 +122,57 @@ propre (pas le nom de fichier) dans tous les `href` internes qui pointent vers l
 
 ## Contenu carte — Prix et descriptions ne jamais modifier sans validation Kevin/AM Talents
 
-### Sandwichs Signatures
-- Le K — 13€
-- Le ATZ — 14€
-- Le AV — 15€
-- Le KATZAV — 16€
+### Menu Frites + Boisson : +4€ (supplément, toutes sections)
 
-### Sandwichs Classiques
-- L'Americano — 13€, Chicken — 14€, Merguez — 15€
+### Sandwichs Signatures
+- Le K — 14€, Le Atz — 15€, Le Av — 16€, Le Katzav — 17€
 
 ### Spécialités
-- Atzado — 18€, Katz Chicken — 17€, Pita Crispy — 18€, Le Halla Pastrami — 16€
-
-### Baguette Charcuterie
-- Le Full Rosette — 16€, Le Full Mandoline — 17€, Le Full Mix — 18€
+- Le Halla Pastrami — 16€, Le Halla Schnitzel — 16€, Katz Chicken — 17€
+- Atzado — 18€, Pita Crispy — 18€
 
 ### Burgers (avec frites fraîches maison)
-- Classic Burger — 15€, Big Burger — 18€, Classic Chicken — 14€, Big Chicken — 17€
+- Classic Burger — 15€, Classic Chicken — 15€, Big Burger — 18€, Big Chicken — 18€
+- Burger Assado — 18€, Double Burger — 18€
 
-### Plats (avec frites et salade)
-- Entrecôte — 30€, Assado — 22€, Schwarma — 18€, Steak à cheval — 15€
+### Baguettes, Halla & Viennois (avec frites fraîches maison)
+- L'Americano — 13€, Le Dinde — 13€, Le Chicken — 14€, Le Poulet Grillé — 14€, Le Merguez — 15€
+- Le Full Rosette — 15€, Le Full Mandoline — 16€, Le Full Mix — 17€
+
+### Klub (avec frites fraîches maison)
+- Klub Thon — 14€, Klub Saumon — 15€, Klub Katzav — 16€, Le Katzu — 17€, Le Katz Deli — 17€
+
+### Bun and Co.
+- Hot-Dog — 10€, Bun Dinde — 12€, Bun Saumon — 12€, Bun Thon — 12€
 
 ### Starters
-- Houmous Bassar — 16€, Arayes ×3 — 15€, Assiette Merguez ×4 — 15€
-- Piment del Padron — 8€, Onion Rings ×6 — 8€, Chicken Nuggets ×5 — 10€
-- Plateau de charcuterie — 25€
+- Frites fraîches — 4€, Petit pot de choux ou coleslaw — 4€, Onion Rings x7 — 8€
+- Tenders de poulet x5 — 10€, Arayes ×4 — 15€
+- Houmous Falafel — 15€, Houmous Shawarma — 15€, Houmous Bassar — 16€
+- Plateau de charcuterie — 22€
 
-### Bagel & Hot-Dog
-- Bagel Dinde — 12€, Bagel Saumon — 12€, Hot-Dog — 10€
+### À l'Assiette (avec salade, choux, coleslaw, houmous, frites fraîches)
+- Steak à cheval — 20€, Schnitzel — 20€, Poulet grillé — 20€
+- Assado — 22€, Shawarma de poulet — 22€, Merguez — 22€
 
-### Pizzeta
-- L'Arménienne — 16€, L'Entrecôte — 22€
+### Salades — 16€
+Base : salade, tomate cerise, maïs, avocat, pickles d'oignon rouge, concombres, vinaigrette et balsamique
+Choix : poulet pané / poulet grillé / saumon fumé / charcuterie (dinde ou pastrami)
 
-### Salade — 16€
+### Boissons
+- Eau — 2,5€, Eau gazeuse — 2,5€, Soda — 3€, Bière — 4€, Verre de vin — 5€, Café — 2€
 
-### Dessert & Boissons
-- Bagel Choco Speculoos — 8€
-- Soda 3€, Eau 2,5€, Bière 4€, Café 2€, Vin à la demande
+### Desserts
+- Bagel Choco Speculoos — 7€, Klub Choco Pralin — 7€, Brownie — 7€
 
-### Menu Kid — 12€
+### Menu Kid — 13€ (jusqu'à 12 ans)
+Au choix : Nuggets + Frites / Burger + Frites / Hot-Dog + Frites + Boisson Capri Sun + Dessert du moment
 
-### La Compo — 14€ base
-Suppléments : Veau à l'os +2€, Mayo truffée +1€, Mayo spicy +1€
+### La Compo — 15€ base
+Pains : Classique, Sésame, Olives noires, Klub, Baguette, Halla
+Garnitures (x3) : … Avocat +1,5€
+Charcuteries (x3) : … Veau à l'os +2€, Saucisse +2€
+Sauces (x2) : … Mayo truffée +1€
 
 ---
 
